@@ -7,7 +7,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.hero_bg {
+  background-image: url(/public/images/herolead.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.msg_section {
+  background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/public/images/photo-14.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
 }
