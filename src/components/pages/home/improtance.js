@@ -30,7 +30,7 @@ const Importance = () => {
                             </div>
                         </div>
                         <div className="w-[25%] text-end p-4">
-                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato">Invest</button>
+                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ const Importance = () => {
                             </div>
                         </div>
                         <div className="w-[25%] text-end p-4">
-                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato">Invest</button>
+                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const Importance = () => {
                             </div>
                         </div>
                         <div className="w-[25%] text-end p-4">
-                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato">Invest</button>
+                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
                         </div>
                     </div>
                 </div>

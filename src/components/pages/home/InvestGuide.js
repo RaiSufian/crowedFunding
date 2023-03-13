@@ -22,7 +22,7 @@ const InvestGuide = () => {
                         <li>Investors must understand that they are investing or loaning at their own risk and should only use proper banking channels to transfer their funds. They should also check local laws in their country regarding making investments or loans according to their country's laws.</li>
                     </ul>
                     <div className="text-center pt-10">
-                        <button className="Check Details and Projects with T&C Here bg-[#7230b0] px-11 py-4 text-white font-bold rounded-full">Check Details and Projects with T&C Here</button>
+                        <button className="Check Details and Projects with T&C Here bg-[#7230b0] px-11 py-4 text-white font-bold rounded-full hover:bg-black hover:text-white">Check Details and Projects with T&C Here</button>
                     </div>
                 </div>
             </div>

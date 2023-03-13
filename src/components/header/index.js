@@ -19,7 +19,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="">
-                        <button className="bg-[#7230b0] py-3 px-5 rounded-full font-bold font-lato leading-none">Support us</button>
+                        <button className="bg-[#7230b0] py-3 px-5 rounded-full font-bold font-lato leading-none hover:bg-black hover:text-white">Support us</button>
                     </div>
                 </div>
             </div>
