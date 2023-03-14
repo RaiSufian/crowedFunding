@@ -24,9 +24,43 @@ code {
 }
 
 .msg_section {
-  background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/public/images/photo-14.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/public/images/photo-14.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
   background-size: cover;
+}
+
+.slick-arrow {
+  position: relative;
+}
+
+.slick-arrow {
+
+  z-index: 999;
+}
+
+.slick-prev {
+  left: 15px !important;
+  width: 30px !important;
+
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important;
+}
+
+.slick-next {
+  right: 15px !important;
+  width: 30px !important;
+}
+
+.slick-dots {
+  bottom: 20px !important;
+}
+
+.slick-dots li button:before {
+  color: White !important;
+  font-size: 12px !important;
 }
