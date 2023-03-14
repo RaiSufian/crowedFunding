@@ -10,14 +10,14 @@ const Header = () => {
         if ("1023" < screen) {
             console.log("I am working")
             setOpen(true);
-            
+
         }
     }, [])
     return (
-        <div className="bg-gray-900 text-white">
-            <div className="lg:w-[1260px] max-w-full mx-auto relative ">
+        <div className="bg-gray-900 text-white py-3 md:py-0">
+            <div className="lg:w-[1260px] max-w-full  mx-auto relative ">
                 <div className="flex items-center justify-between">
-                    <div className="main_logo relative z-50">
+                    <div className="main_logo relative z-50 px-2">
                         <img src="./images/logo.png" width={117} height={35} />
                     </div>
                     <div className="main_menu">
@@ -29,7 +29,7 @@ const Header = () => {
                             <li className="mx-2"><Link to="/" className="py-3 px-4 text-sm font-bold">Support us</Link></li>
                         </ul>
                     </div>
-                    <div className="">
+                    <div className="px-2">
                         <div className="lg:hidden">
                             <Hamburger toggled={isOpen} toggle={setOpen} />
                         </div>

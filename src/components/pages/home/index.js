@@ -5,9 +5,9 @@ import InvestGuide from "./InvestGuide";
 const Home = () => {
     return (
         <>  <HeroSection />
-            <Importance />
+            {/* <Importance />
             <Message />
-            <InvestGuide />
+            <InvestGuide /> */}
         </>
     )
 }
