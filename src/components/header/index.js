@@ -8,7 +8,6 @@ const Header = () => {
     useEffect(() => {
         let screen = window.innerWidth;
         if ("1023" < screen) {
-            console.log("I am working")
             setOpen(true);
 
         }
@@ -19,7 +18,7 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     <div className="main_logo relative z-50 px-2">
                         <Link to="/">
-                            <img src="./images/logo.png" width={117} height={35} />
+                            <img src="/images/logo.png" width={117} height={35} />
                         </Link>
 
                     </div>

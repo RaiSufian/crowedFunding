@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 const ProjectCard = () => {
     return (
+
         <div className="w-full px-2 ">
             <div className="border border-[#ffa500]">
                 <img src="./images/property1.jpg" className="h-32 w-full object-cover" />
@@ -31,7 +32,7 @@ const ProjectCard = () => {
                     </div>
 
                 </div>
-                <Link to="/">
+                <Link to="project/:refurbishment-opportunity">
                     <button className="uppercase text-center w-full py-3 bg-[#ffa500] text-white  font-semibold tracking-widest">Funded</button>
                 </Link >
 

@@ -7,6 +7,7 @@ import ContactUs from "./components/pages/contactus";
 import Login from './components/authPages/login';
 import NotFound from "./components/pages/error/notFound";
 import SignUp from "./components/authPages/sign";
+import ProjectDetails from "./components/pages/projectDetails";
 function App() {
   return (
     <>
@@ -15,7 +16,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/sign_up" element={<SignUp/>}/>
+        <Route path="project/:refurbishment-opportunity" element={<ProjectDetails />} />
+        <Route path="/sign_up" element={<SignUp />} />
         <Route path="/user/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

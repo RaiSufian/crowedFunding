@@ -20,6 +20,7 @@ module.exports = {
       'mont': ['Montserrat', 'sans-serif'],
       'lato': ['Lato', 'sans-serif'],
     },
+
   },
   plugins: [],
 }
