@@ -25,7 +25,7 @@ const ActiveProject = () => {
                     <h1 className="lg:text-[40px] md:text-[30px] text-[28px] font-bold py-4 text-[#151D29FF] text-center">Property Investment Opportunities
                     </h1>
                     <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
-                    <div className="flex flex-wrap justify-between mt-5">
+                    <div className="flex flex-wrap justify-center gap-5 mt-5">
                         <div className="w-[30%]">
                             <ProjectCard />
                         </div>
