@@ -8,6 +8,7 @@ import Login from './components/authPages/login';
 import NotFound from "./components/pages/error/notFound";
 import SignUp from "./components/authPages/sign";
 import ProjectDetails from "./components/pages/projectDetails";
+import ActiveProject from './components/pages/Projects/activeproject';
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/sign_up" element={<SignUp />} />
         <Route path="/user/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/active_projects" element={<ActiveProject/>}/>
       </Routes>
       <Footer />
     </>

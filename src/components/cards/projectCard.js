@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const ProjectCard = () => {
     return (
 
-        <div className="w-full px-2 ">
+        <div className="w-full px-2 mt-5">
             <div className="border border-[#ffa500]">
                 <img src="./images/property1.jpg" className="h-32 w-full object-cover" />
                 <div className="h-28">

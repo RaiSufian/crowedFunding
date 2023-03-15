@@ -18,7 +18,7 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     <div className="main_logo relative z-50 px-2">
                         <Link to="/">
-                            <img src="/images/logo.png" width={117} height={35} />
+                            <img src="/images/logo.png" width={117} height={35} alt="logo" />
                         </Link>
 
                     </div>
@@ -27,8 +27,9 @@ const Header = () => {
                             <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold font-mont border-b border-gray-900 hover:border-white">Home</Link></li>
                             <li className="mx-2 px-4"><Link to="/aboutus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">About Us</Link></li>
                             <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Events</Link></li>
+                            <li className="mx-2 px-4"><Link to="/active_projects" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Projects</Link></li>
                             <li className="mx-2 px-4"><Link to="/contactus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Content</Link></li>
-                            <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Support us</Link></li>
+
                         </ul>
                     </div>
                     <div className="px-2">

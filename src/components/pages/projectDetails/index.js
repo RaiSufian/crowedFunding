@@ -35,22 +35,22 @@ const ProjectDetails = () => {
                             <div className="">
                                 <Slider {...settings}>
                                     <div className="">
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
                                     </div>
                                 </Slider>
                             </div>
