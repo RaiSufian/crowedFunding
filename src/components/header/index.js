@@ -18,23 +18,27 @@ const Header = () => {
             <div className="lg:w-[1260px] max-w-full  mx-auto relative ">
                 <div className="flex items-center justify-between">
                     <div className="main_logo relative z-50 px-2">
-                        <img src="./images/logo.png" width={117} height={35} />
+                        <Link to="/">
+                            <img src="./images/logo.png" width={117} height={35} />
+                        </Link>
+
                     </div>
                     <div className="main_menu">
-                        <ul className={`flex gap-4 lg:gap-0 lg:flex-row flex-col absolute  lg:static left-0 top-full w-full bg-gray-900 items-center py-6 py-3 animate-menu_ani ${isOpen ? null : 'hidden'}`}>
-                            <li className="mx-2"><Link to="/" className="py-3 px-4 text-sm font-bold font-mont">Home</Link></li>
-                            <li className="mx-2"><Link to="/aboutus" className="py-3 px-4 text-sm font-bold">About Us</Link></li>
-                            <li className="mx-2"><Link to="/" className="py-3 px-4 text-sm font-bold">Events</Link></li>
-                            <li className="mx-2"><Link to="/" className="py-3 px-4 text-sm font-bold">Content</Link></li>
-                            <li className="mx-2"><Link to="/" className="py-3 px-4 text-sm font-bold">Support us</Link></li>
+                        <ul className={`flex gap-4 lg:gap-0 lg:flex-row flex-col absolute z-10  lg:static left-0 top-full w-full bg-gray-900 items-center py-6 py-3 animate-menu_ani ${isOpen ? null : 'hidden'}`}>
+                            <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold font-mont border-b border-gray-900 hover:border-white">Home</Link></li>
+                            <li className="mx-2 px-4"><Link to="/aboutus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">About Us</Link></li>
+                            <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Events</Link></li>
+                            <li className="mx-2 px-4"><Link to="/contactus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Content</Link></li>
+                            <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Support us</Link></li>
                         </ul>
                     </div>
                     <div className="px-2">
                         <div className="lg:hidden">
                             <Hamburger toggled={isOpen} toggle={setOpen} />
                         </div>
-
-                        <button className="bg-[#7230b0] py-3 px-5 rounded-full font-bold font-lato leading-none hover:bg-black hover:text-white hidden lg:block">Support us</button>
+                        <Link to="/user/login">
+                            <button className="bg-[#7230b0] border hover:border-white border-gray-900 py-3 px-6 rounded-full font-bold font-lato leading-none hover:bg-black hover:text-white hidden lg:block">Log In</button>
+                        </Link>
                     </div>
                 </div>
             </div>
