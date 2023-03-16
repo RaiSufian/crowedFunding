@@ -32,7 +32,7 @@ const ProjectCard = () => {
                     </div>
 
                 </div>
-                <Link to="project/:refurbishment-opportunity">
+                <Link to="/project/refurbishment-opportunity">
                     <button className="uppercase text-center w-full py-3 bg-[#ffa500] text-white  font-semibold tracking-widest">Funded</button>
                 </Link >
 
