@@ -159,9 +159,12 @@ const ProjectDetails = () => {
                                         <span><strong>46</strong> days left to fund</span>
                                     </div>
                                     <div className="mt-2">
-                                        <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm">
-                                            Invest Now
-                                        </button>
+                                        <Link to="/StartFunding">
+                                            <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm">
+                                                Invest Now
+                                            </button>
+                                        </Link>
+
                                         <div className="p-1 w-36 h-36 mx-auto rounded-full overflow-hidden mt-5">
                                             <img src="/images/darkLogo.jpg" className="h-full w-full rounded-full  shadow-md " />
                                         </div>
@@ -173,7 +176,7 @@ const ProjectDetails = () => {
                     </div>
                 </div>
                 <div className="">
-                    <ProjectCard aboutPage={"Related Projects"}/>
+                    <ProjectCard aboutPage={"Related Projects"} />
                 </div>
             </section>
         </>
