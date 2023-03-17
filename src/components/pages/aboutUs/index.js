@@ -30,27 +30,28 @@ const AboutUs = () => {
 
                     </div>
                     <div className="py-8">
-                        <h3 className="text-center text-3xl font-bold font-lato">About the Founders
+                        <h3 className="text-center text-3xl font-bold font-lato pb-5">About the Founders
                         </h3>
-                        <div className="lg:flex pt-7 ">
+                        <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
+                        <div className="lg:flex pt-10 ">
                             <div className="lg:w-[30%] flex ">
                                 <div className="relative before:absolute before:w-full before:h-full before:content-[''] before:bg-black before:top-2 before:right-2 mx-auto">
                                     <img src="/images/ceo_img.jpg" alt="ceo_img" className="w-60 h-60 object-cover relative z-10" />
                                 </div>
                             </div>
                             <div className="lg:w-[70%]">
-                                <h2 className="text-2xl font-bold pb-3 font-lato pt-4 lg:pt-0">CEO Message</h2>
+                                <h2 className="text-xl font-semibold pb-3 font-lato pt-4 lg:pt-0">CEO Message</h2>
                                 <p className="text-lg text-gray-800 ">Real estate properties, in general, carry a lower risk of devaluation. However, to initiate investment in properties, a considerable sum of money is usually required. Investment products tailored to cater to the needs of small-scale investors in London properties are currently limited. London's real estate market is one of the most dynamic in the world, with a high rate of movement owing to its position as a global banking and finance hub, with numerous people relocating in and out of the city.</p>
                             </div>
                         </div>
-                        <div className="lg:flex pt-7 ">
+                        <div className="lg:flex pt-10 ">
                             <div className="lg:w-[30%] flex ">
                                 <div className="relative before:absolute before:w-full before:h-full before:content-[''] before:bg-black before:top-2 before:right-2 mx-auto">
                                     <img src="/images/ceo_img.jpg" alt="ceo_img" className="w-60 h-60 object-cover relative z-10" />
                                 </div>
                             </div>
                             <div className="lg:w-[70%]">
-                                <h2 className="text-2xl font-bold pb-3 font-lato pt-4 lg:pt-0">Founder Message</h2>
+                                <h2 className="text-xl font-semibold pb-3 font-lato pt-4 lg:pt-0">Founder Message</h2>
                                 <p className="text-lg text-gray-800 ">Real estate properties, in general, carry a lower risk of devaluation. However, to initiate investment in properties, a considerable sum of money is usually required. Investment products tailored to cater to the needs of small-scale investors in London properties are currently limited. London's real estate market is one of the most dynamic in the world, with a high rate of movement owing to its position as a global banking and finance hub, with numerous people relocating in and out of the city.</p>
                             </div>
                         </div>
