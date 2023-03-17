@@ -30,13 +30,18 @@ code {
   background-origin: border-box;
   background-size: cover;
 }
-.contact_bread_crumb{
+
+.contact_bread_crumb {
   background-image: url(/public/images/menubg.jpg);
 }
+
 .slick-arrow {
   position: relative;
 }
-input:focus, input:hover, input:focus-visible{
+
+input:focus,
+input:hover,
+input:focus-visible {
   border: none;
 }
 
@@ -68,4 +73,10 @@ input:focus, input:hover, input:focus-visible{
 .slick-dots li button:before {
   color: White !important;
   font-size: 12px !important;
+}
+
+.sticky_side {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }

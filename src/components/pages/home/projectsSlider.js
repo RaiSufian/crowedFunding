@@ -2,7 +2,7 @@
 import Slider from 'react-slick';
 import ProjectCard from '../../cards/projectCard';
 
-const ProjectSlider = () => {
+const ProjectSlider = ({ aboutPage }) => {
     var settings = {
         dots: false,
         infinite: false,
@@ -41,7 +41,7 @@ const ProjectSlider = () => {
 
     return (
         <div className="mx-auto  px-4 py-6">
-            <h2 className="text-center text-4xl py-5 font-bold">Property Investment</h2>
+            <h2 className="px-3 text-4xl py-5 font-bold">{aboutPage}</h2>
             <Slider {...settings}>
                 <div className="mx-auto">
                     <ProjectCard />

@@ -1,6 +1,7 @@
 import Slider from 'react-slick';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
+import ProjectCard from '../home/projectsSlider'
 const ProjectDetails = () => {
     const settings = {
         dots: true,
@@ -38,19 +39,19 @@ const ProjectDetails = () => {
                                         <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
                                     </div>
                                     <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg"  alt="pro_img"  />
+                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
                                     </div>
                                 </Slider>
                             </div>
@@ -108,7 +109,7 @@ const ProjectDetails = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="lg:w-[35%] w-full sticky top-0">
+                        <div className="lg:w-[35%] w-full h-screen sticky top-8">
                             <div className="border rounded-sm border-gray-200 p-3 relative">
                                 <h1 className="font-semibold text-2xl font-lato pr-3">Abu Samra Al Aamriya
                                     Riyadah</h1>
@@ -124,10 +125,7 @@ const ProjectDetails = () => {
 
                             </div>
                             <div className="border rounded-sm border-gray-200 p-3 mt-4">
-                                {/* <div className="p-1 w-32 h-32 mx-auto rounded-full overflow-hidden">
-                                    <img src="/images/darkLogo.jpg" className="h-full w-full rounded-full  shadow-md " />
-                                </div>
-                                <h2 className="text-center text-xl font-semibold py-2 ">Company Name</h2> */}
+
 
                                 <div className="">
                                     <ul className="py-2">
@@ -162,19 +160,21 @@ const ProjectDetails = () => {
                                     </div>
                                     <div className="mt-2">
                                         <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm">
-                                            Register Now
+                                            Invest Now
                                         </button>
-                                        <p className="py-3">Already have an account?</p>
-                                        <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm">
-                                            Log In
-                                        </button>
+                                        <div className="p-1 w-36 h-36 mx-auto rounded-full overflow-hidden mt-5">
+                                            <img src="/images/darkLogo.jpg" className="h-full w-full rounded-full  shadow-md " />
+                                        </div>
+                                        <h2 className="text-center text-xl font-semibold py-2 ">Company Name</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <div className="">
+                    <ProjectCard aboutPage={"Related Projects"}/>
+                </div>
             </section>
         </>
     )

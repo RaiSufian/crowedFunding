@@ -9,7 +9,7 @@ const Home = () => {
             <Importance />
             <Message />
             <InvestGuide />
-            <ProjectSlider />
+            <ProjectSlider aboutPage={"Related Projects"}/>
         </>
     )
 }

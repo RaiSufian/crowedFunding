@@ -28,7 +28,6 @@ const Header = () => {
                             <li className="mx-2 px-4"><Link to="/aboutus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">About Us</Link></li>
                             <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Events</Link></li>
                             <li className="mx-2 px-4"><Link to="/active_projects" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Projects</Link></li>
-                            <li className="mx-2 px-4"><Link to="/contactus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Content</Link></li>
 
                         </ul>
                     </div>
@@ -36,8 +35,8 @@ const Header = () => {
                         <div className="lg:hidden">
                             <Hamburger toggled={isOpen} toggle={setOpen} />
                         </div>
-                        <Link to="/user/login">
-                            <button className="bg-[#7230b0] border hover:border-white border-gray-900 py-3 px-6 rounded-full font-bold font-lato leading-none hover:bg-black hover:text-white hidden lg:block">Log In</button>
+                        <Link to="/contactus">
+                            <button className="bg-[#7230b0] border hover:border-white border-gray-900 py-3 px-6 rounded-full font-bold font-lato leading-none hover:bg-black hover:text-white hidden lg:block">Contact Us</button>
                         </Link>
                     </div>
                 </div>
