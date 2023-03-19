@@ -12,14 +12,14 @@ const InvestGuide = () => {
                         <li className="font-xl font-lato leading-relaxed text-[#151D29FF] ">
                             This is a high-risk investment or Loan. You may not be able to access your money easily and are unlikely to be protected if something goes wrong.<br />Our platform connects investors and property professionals through various projects, providing access to UK property investments/Loans.
                         </li>
-                        <li>
+                        <li className="font-xl font-lato leading-relaxed text-[#151D29FF] ">
                             By participating in 'live' projects, investors can access property investment opportunities and gain knowledge about different property strategies.                        </li>
-                        <li>
+                        <li className="font-xl font-lato leading-relaxed text-[#151D29FF] ">
                             Our platform helps fund developers' projects, enabling them to build more homes, increase their brand presence, and expand their investor community.                        </li>
-                        <li>
+                        <li className="font-xl font-lato leading-relaxed text-[#151D29FF] ">
                             Our recommended team, consisting of experienced property developers and architects, enjoys what we do and has expertise in buy-to-lets, renovations, empty property conversions, new builds, and HMOs in the UK.                        </li>
-                        <li>Our focus area is Greater London within the M25 route, where the property market has a higher rate of selling and buying.</li>
-                        <li>Investors must understand that they are investing or loaning at their own risk and should only use proper banking channels to transfer their funds. They should also check local laws in their country regarding making investments or loans according to their country's laws.</li>
+                        <li className="font-xl font-lato leading-relaxed text-[#151D29FF] ">Our focus area is Greater London within the M25 route, where the property market has a higher rate of selling and buying.</li>
+                        <li className="font-xl font-lato leading-relaxed text-[#151D29FF] ">Investors must understand that they are investing or loaning at their own risk and should only use proper banking channels to transfer their funds. They should also check local laws in their country regarding making investments or loans according to their country's laws.</li>
                     </ul>
                     <div className="text-center pt-10">
                         <button className="Check Details and Projects with T&C Here bg-[#7230b0] px-11 py-4 text-white font-bold rounded-full hover:bg-black hover:text-white leading-none">Check Details and Projects with T&C Here</button>
