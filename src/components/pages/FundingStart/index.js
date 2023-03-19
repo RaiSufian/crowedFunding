@@ -23,51 +23,51 @@ const StartFunding = () => {
                     <h2 className="text-center text-2xl font-semibold pb-5 ">Enter Your Personal Infomation</h2>
                     <div className="bg-gray-100 px-5 font-mont">
                         <form className="flex flex-wrap py-8">
-                            <div className="pt-4 w-1/2 px-2">
+                            <div className="pt-4 lg:w-1/2 w-full px-2">
                                 <label>Email<span className="text-red-500 text-xl">*</span></label>
                                 <input type="email" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your email' required />
                             </div>
-                            <div className="pt-4 w-1/2 px-2">
+                            <div className="pt-4 lg:w-1/2 w-full px-2">
                                 <label>Confirm Email<span className="text-red-500 text-xl">*</span></label>
                                 <input type="email" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='confirm your email' required />
                             </div>
-                            <div className="pt-4 w-1/2 px-2">
+                            <div className="pt-4 lg:w-1/2 w-full px-2">
                                 <label>Name<span className="text-red-500 text-xl">*</span ></label>
                                 <input type="name" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your name' required />
                             </div>
-                            <div className="pt-4 w-1/2 px-2">
+                            <div className="pt-4 lg:w-1/2 w-full px-2">
                                 <label>Phone<span className="text-red-500 text-xl">*</span></label>
                                 <input type="name" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your name' required />
                             </div>
-                            <div className="pt-4 w-1/2 px-2">
+                            <div className="pt-4 lg:w-1/2 w-full px-2">
                                 <label>Day of Birth<span className="text-red-500 text-xl">*</span></label>
                                 <input type="date" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='' required />
                             </div>
-                            <div className="pt-4 w-3/4 px-2">
+                            <div className="pt-4 lg:w-3/4 w-full px-2">
                                 <label>Address<span className="text-red-500 text-xl">*</span></label>
                                 <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
                             </div>
-                            <div className="pt-4 w-1/3 px-2">
+                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>House no<span className="text-red-500 text-xl">*</span></label>
                                 <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
                             </div>
-                            <div className="pt-4 w-1/3 px-2">
+                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>Town<span className="text-red-500 text-xl">*</span></label>
                                 <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
                             </div>
-                            <div className="pt-4 w-1/3 px-2">
+                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>House no<span className="text-red-500 text-xl">*</span></label>
                                 <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
                             </div>
-                            <div className="pt-4 w-1/3 px-2">
+                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>Country<span className="text-red-500 text-xl">*</span></label>
                                 <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
                             </div>
-                            <div className="pt-4 w-1/3 px-2">
+                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>State<span className="text-red-500 text-xl">*</span></label>
                                 <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
                             </div>
-                            <div className="pt-4 w-1/3 px-2">
+                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>City<span className="text-red-500 text-xl">*</span></label>
                                 <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
                             </div>

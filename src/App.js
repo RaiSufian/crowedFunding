@@ -8,8 +8,14 @@ import NotFound from "./components/pages/error/notFound";
 import ProjectDetails from "./components/pages/projectDetails";
 import ActiveProject from './components/pages/Projects/activeproject';
 import StartFunding from "./components/pages/FundingStart";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <Header />
