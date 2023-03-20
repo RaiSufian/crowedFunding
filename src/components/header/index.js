@@ -9,7 +9,6 @@ const Header = () => {
         let screen = window.innerWidth;
         if ("1023" < screen) {
             setOpen(true);
-
         }
     }, [])
     return (
@@ -20,14 +19,13 @@ const Header = () => {
                         <Link to="/">
                             <img src="/images/logo.png" width={117} height={35} alt="logo" />
                         </Link>
-
                     </div>
                     <div className="main_menu">
                         <ul className={`flex gap-4 lg:gap-0 lg:flex-row flex-col absolute z-10  lg:static left-0 top-full w-full bg-gray-900 items-center py-6 py-3 animate-menu_ani ${isOpen ? null : 'hidden'}`}>
                             <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold font-mont border-b border-gray-900 hover:border-white">Home</Link></li>
                             <li className="mx-2 px-4"><Link to="/aboutus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">About Us</Link></li>
-                            <li className="mx-2 px-4"><Link to="/" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Events</Link></li>
                             <li className="mx-2 px-4"><Link to="/active_projects" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">Projects</Link></li>
+                            <li className="mx-2 px-4"><Link to="/faqs" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white">FAQs</Link></li>
 
                         </ul>
                     </div>

@@ -1,9 +1,9 @@
 const InvestGuide = () => {
     return (
         <section className="section_guide">
-            <div className="lg:w-[1260px] max-w-full mx-auto font-mont py-10">
+            <div className="lg:w-[1260px] max-w-full mx-auto font-mont md:py-10 py-6">
                 <div className="text-center  px-[5vw] ">
-                    <h2 className="lg:text-[40px] text-[32px] font-bold md:leading-loose py-4 text-[#151D29FF]">Investors to Understand the Risk before they Invest or Grant Unsecured Loans here</h2>
+                    <h2 className="lg:text-[40px] md:text-[32px] text-[22px] font-bold md:leading-loose py-4 text-[#151D29FF]">Investors to Understand the Risk before they Invest or Grant Unsecured Loans here</h2>
                 </div>
                 <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
 

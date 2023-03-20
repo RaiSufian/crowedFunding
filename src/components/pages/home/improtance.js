@@ -3,11 +3,11 @@ const Importance = () => {
         <section className="section_importance lg:py-16 md:py-8">
             <div className="lg:w-[1260px] max-w-full mx-auto font-mont">
                 <div className="text-center  px-[10vw] ">
-                    <h2 className="lg:text-[40px] md:text-[30px] text-[28px] font-bold lg:leading-loose leading-relaxed py-4 text-[#151D29FF]">Small Investors Crowd Fund Unsecured Small Loans to Property </h2>
+                    <h2 className="lg:text-[40px] md:text-[30px] text-[22px] font-bold lg:leading-loose leading-relaxed py-4 text-[#151D29FF]">Small Investors Crowd Fund Unsecured Small Loans to Property </h2>
                 </div>
                 <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
                 {/* why*/}
-                <div className="why-us md:pt-6 pt-10 px-[5vw]">
+                <div className="why-us md:pt-6 pt-8 px-[5vw]">
                     <div className="md:flex">
                         <div className="lg:w-[15%] md:w-[20%] w-full">
                             <div>

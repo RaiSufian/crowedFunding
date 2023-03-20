@@ -40,8 +40,8 @@ const ProjectSlider = ({ aboutPage }) => {
     const imgs = [{ url: "hello1" }, { url: "hello2" }, { url: "hello3" }, { url: "hello4" }, { url: "hello5" }]
 
     return (
-        <div className="mx-auto  px-4 py-6">
-            <h2 className="px-3 text-4xl py-5 font-bold">{aboutPage}</h2>
+        <div className="mx-auto  px-4 py-6 pt-0">
+            <h2 className="px-3 md:text-4xl text-2xl md:py-5 py-2 font-bold">{aboutPage}</h2>
             <Slider {...settings}>
                 <div className="mx-auto">
                     <ProjectCard />

@@ -10,6 +10,7 @@ import ActiveProject from './components/pages/Projects/activeproject';
 import StartFunding from "./components/pages/FundingStart";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import FAQs from "./components/pages/faqs/faqs";
 
 function App() {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/StartFunding" element={<StartFunding />} />
         <Route path="/project/:refurbishment-opportunity" element={<ProjectDetails />} />
         <Route path="/active_projects" element={<ActiveProject />} />
+        <Route path="/faqs" element={<FAQs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
