@@ -20,7 +20,8 @@ const StartFunding = () => {
             </div>
             <div className="">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative py-10">
-                    <h2 className="text-center text-2xl font-semibold pb-5 ">Enter Your Personal Infomation</h2>
+                    <h2 className="lg:text-[40px] md:text-[30px] text-[28px] font-bold py-6 text-[#151D29FF] text-center pb-5 ">Enter Your Personal Infomation</h2>
+                    <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto mb-10"></div>
                     <div className="bg-gray-100 px-5 font-mont">
                         <form className="flex flex-wrap py-8">
                             <div className="pt-4 lg:w-1/2 w-full px-2">
@@ -49,30 +50,31 @@ const StartFunding = () => {
                             </div>
                             <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>House no<span className="text-red-500 text-xl">*</span></label>
-                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
+                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your house #' required />
+                            </div>
+                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
+                                <label>Street Name<span className="text-red-500 text-xl">*</span></label>
+                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your street name' required />
                             </div>
                             <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>Town<span className="text-red-500 text-xl">*</span></label>
-                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
+                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your town name' required />
                             </div>
-                            <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
-                                <label>House no<span className="text-red-500 text-xl">*</span></label>
-                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
-                            </div>
+
                             <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>Country<span className="text-red-500 text-xl">*</span></label>
-                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
+                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='your country name' required />
                             </div>
                             <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>State<span className="text-red-500 text-xl">*</span></label>
-                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
+                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your state name' required />
                             </div>
                             <div className="pt-4 lg:w-1/3 md:w-1/2 w-full px-2">
                                 <label>City<span className="text-red-500 text-xl">*</span></label>
-                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your address' required />
+                                <input type="text" className="h-11 border-1 w-full py-1 px-2 rounded" placeholder='enter your city name' required />
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-2">
-                                <input type="checkbox" /> <Link className="font-xl">Terms & Conditions</Link>
+                                <input type="checkbox" /> <Link className="font-md text-blue">Terms & Conditions</Link>
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-2">
                                 <input type="checkbox" /> You need to check <Link >Disclaimer</Link>
