@@ -31,13 +31,13 @@ const ContactUs = () => {
                         <p>Fell free to get in touch with me. I am always open to discussing new projects. Creative ideas or opportunties to be part of your visions</p>
                         <ul className="py-2">
                             <li className="flex items-center gap-3 pt-3">
-                                <span className="bg-[#ffa500] p-1 rounded-full"><Icon icon="ic:outline-email" className="text-4xl text-white " /></span>   <a href="">temp@gmail.com</a>
+                                <span className="bg-[#ffa500] p-1 rounded-full"><Icon icon="ic:outline-email" className="text-4xl text-white " /></span>   <a href="#">temp@gmail.com</a>
                             </li>
                             <li className="flex items-center gap-3 pt-3">
-                                <span className="bg-[#ffa500] p-1 rounded-full"><Icon icon="material-symbols:phone-in-talk-outline" className="text-4xl text-white " /></span>   <a href="">+44 123 456 65</a>
+                                <span className="bg-[#ffa500] p-1 rounded-full"><Icon icon="material-symbols:phone-in-talk-outline" className="text-4xl text-white " /></span>   <a href="#">+44 123 456 65</a>
                             </li>
                             <li className="flex items-center gap-3 pt-3">
-                                <span className="bg-[#ffa500] p-1 rounded-full"><Icon icon="ic:outline-email" className="text-4xl text-white " /></span>   <a href="">temp@gmail.com</a>
+                                <span className="bg-[#ffa500] p-1 rounded-full"><Icon icon="ic:outline-email" className="text-4xl text-white " /></span>   <a href="#">temp@gmail.com</a>
                             </li>
                         </ul>
                     </div>
