@@ -33,9 +33,9 @@ const CheckOut = () => {
                         <Icon icon="material-symbols:arrow-back-ios-new-rounded" className="text-2xl" /> <span className="pr-2">Back</span>
                     </button>
                 </div>
-                <div className="flex gap-3">
-                    <div className="flex-1">
-                        <div className="pt-3 pb-8">
+                <div className="flex gap-3 py-5">
+                    <div className="flex-1 bg-gray-100 p-3">
+                        <div className="">
                             <div className="">
                                 <h3 className="text-gray-700 text-2xl py-3 font-semibold ">Project Info</h3>
                                 <div className="flex p-5 bg-gray-100 gap-3 rounded">

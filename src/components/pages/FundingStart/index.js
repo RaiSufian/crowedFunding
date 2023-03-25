@@ -317,7 +317,7 @@ const StartFunding = () => {
                             </div>
 
                             <div className="pt-8 w-full px-2 ">
-                                <button type="submit" className="min-w-1/4 bg-blue-500 text-white py-3 px-5 text-2xl hover:bg-[#ffa500]">Proceed to Payment Page </button>
+                                <button type="submit" className="min-w-1/4 bg-blue-500 text-white py-3 px-8 text-xl hover:bg-[#ffa500] rounded">Proceed to Payment Page </button>
                             </div>
                         </form>
                     </div>
