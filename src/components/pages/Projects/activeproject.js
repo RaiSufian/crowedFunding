@@ -21,27 +21,26 @@ const ActiveProject = () => {
             </div>
             <div className="">
 
-                <div className="lg:w-[1260px] max-w-full mx-auto py-10">
-                    <h1 className="lg:text-[40px] md:text-[30px] text-[28px] font-bold py-6 text-[#151D29FF] text-center">Property Investment Opportunities
+                <div className="lg:w-[1260px] max-w-full mx-auto md:py-10 py-5">
+                    <h1 className="lg:text-[40px] md:text-[30px] text-[28px] font-bold lg:py-6 py-3 text-[#151D29FF] text-center">Property Investment Opportunities
                     </h1>
                     <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
                     <div className="flex flex-wrap justify-center gap-5 mt-5">
-                        <div className="w-[30%]">
+                        <div className="lg:w-[30%] md:w-[60%] w-[90%]">
                             <ProjectCard />
                         </div>
-                        <div className="w-[30%]">
+                        <div className="lg:w-[30%] md:w-[60%] w-[90%]">
                             <ProjectCard />
                         </div>
-                        <div className="w-[30%]">
+                        <div className="lg:w-[30%] md:w-[60%] w-[90%]">
                             <ProjectCard />
                         </div>
-                        <div className="w-[30%]">
+                        <div className="lg:w-[30%] md:w-[60%] w-[90%]">
                             <ProjectCard />
                         </div>
-                        <div className="w-[30%]">
+                        <div className="lg:w-[30%] md:w-[60%] w-[90%]">
                             <ProjectCard />
                         </div>
-
                     </div>
                 </div>
             </div>

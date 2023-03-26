@@ -5,7 +5,7 @@ const ProjectCard = () => {
         <div className="w-full px-2 mt-5">
             <div className="border border-[#ffa500]">
                 <img src="/images/property1.jpg" className="h-36 w-full object-cover" />
-                <div className="h-28">
+                <div className="md:h-28 h-36">
                     <h4 className="px-3 pt-3 text-xl font-semibold">Refurbishment  Opportunity</h4>
                     <p className="px-3 text-sm "> COMING TO PLATFORM*** COMING TO PLATFORM *** Short-term refurbishment opportunity.  ISA friendly investment. </p>
                 </div>
