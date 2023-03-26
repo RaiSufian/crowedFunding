@@ -23,18 +23,18 @@ const PrivacyPolicy = () => {
                         Privacy Policy
                     </h2>
                     <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto mb-10"></div>
-                    <div className="">
+                    <div className="text-justify">
                         <h3 className="text-2xl py-2 font-bold">1. Important notice</h3>
                         <p className="px-5">This is the Privacy Policy for <Link to="/" className="text-[#ffa500] font-semibold">V-web </Link>It describes who we are, how we obtain and use your personal data, why we are allowed to do so by law, who has access to your personal data and what your rights are. Please review it carefully.
                             This website is not intended for children and we do not knowingly collect data relating to children.
                             You have the right to object to us processing your personal data for our legitimate business interests or for direct marketing purposes (including any related profiling). For more information about your rights and how you can exercise them, please see the section Your rights.</p>
                     </div>
-                    <div className="">
+                    <div className="text-justify">
                         <h3 className="text-2xl py-2 font-bold">2. About us</h3>
                         <p className="px-5">We are <Link to="/" className="text-[#ffa500] font-semibold">V-web </Link> and our company registration no is and registered office is at….
                             We are the owners of <Link to="/" className="text-[#ffa500] font-semibold">V-web </Link>. We take your privacy seriously and use your personal data as further explained in this Privacy Policy. We are the “controller” of the personal data you provide to us.</p>
                     </div>
-                    <div className="">
+                    <div className="text-justify">
                         <h3 className="text-2xl py-2 font-bold">3. What personal data we collect and why</h3>
                         <p className="px-5">Personal data is any information which identifies you personally whether directly (for example, your name) or indirectly (for example, information about your use of our products and services).<br />
                             <b >We may collect, store, and transfer different kinds of personal data about you which as have grouped together as follows:</b></p>
@@ -52,7 +52,7 @@ const PrivacyPolicy = () => {
                             <li>Third parties We obtain personal data about you from third parties where you have given that third party consent to share such information with us.</li>
                         </ul>
                     </div>
-                    <div className="">
+                    <div className="text-justify">
                         <h3 className="text-2xl py-2 font-bold">4. How we use your personal data</h3>
                         <p className="px-5">We use your personal data for the following purposes:</p>
                         <b className="px-5">Where applicable, to contact you in relation to a prize draw or competition you have entered.
@@ -74,14 +74,14 @@ const PrivacyPolicy = () => {
                         <b className="px-5">To maintain our records and improve data accuracy</b>
                         <p className="px-5">Like any business, we process personal data in the course of maintaining and administering our internal records. This includes processing your personal data to ensure that the information we hold about you is kept up to date and accurate.</p>
                         <b className="px-5">To respond to enquiries, complaints and disputes</b>
-                        <p>We use the personal data we hold about you to help us respond to any enquiries or complaints you have made, or deal with any dispute which may arise in the course of us providing our products and services to you, in the most effective manner.</p>
+                        <p className="px-5">We use the personal data we hold about you to help us respond to any enquiries or complaints you have made, or deal with any dispute which may arise in the course of us providing our products and services to you, in the most effective manner.</p>
                         <b className="px-5">To investigate, detect and prevent fraud and comply with our legal obligations</b>
                         <p className="px-5">
                             In certain circumstances, we use your personal data only to the extent required in order to enable us to comply with our legal obligations, including for fraud detection, investigation and prevention purposes. This may require us to provide your personal data to law enforcement agencies, including Trading Standards, if they request it.
                         </p>
 
                     </div>
-                    <div className="">
+                    <div className="text-justify">
                         <h3 className="text-2xl py-2 font-bold">4. How we use your personal data</h3>
                         <p className="px-5">Data protection law requires us to only process your personal data if we satisfy one or more legal grounds. These are set out in data protection law and we rely on a number of different grounds for the processing we carry out. These are as follows:</p>
                         <b className="px-5">Consent</b>
@@ -113,7 +113,7 @@ const PrivacyPolicy = () => {
                             We have considered these matters and on balance, we consider that the benefits described above are not outweighed by your interests or your fundamental rights and freedoms.<br />
                             Where we think there is a risk that one of your interests or fundamental rights and freedoms may be affected, we will not process your personal data unless there is another legal ground for us to do so (either that we have obtained your consent to the processing or it is necessary for us to perform our contract with you or to comply with our legal obligations).</p>
                     </div>
-                    <div>
+                    <div className="text-justify">
                         <h3 className="text-2xl py-2 font-bold">6. Who we share your personal data with and where it is stored by them
                         </h3>
                         <p className="px-5 ">We may provide your personal data to:</p>
@@ -126,10 +126,10 @@ const PrivacyPolicy = () => {
                                 In some cases, the personal data we collect from you may, for the purposes set out above, be transferred outside the European Economic Area (“EEA”) and such destinations may not have laws which protect your personal data to the same extent as in the EEA. We are required by data protection law to ensure that where we or our “processors” transfer your personal data outside the EEA, it is treated securely and is protected against unauthorized access, loss or destruction, unlawful processing and any processing which is inconsistent with the purposes set out in this Privacy Policy</li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="text-justify">
                         <h3 className="text-2xl py-2 font-bold">7. How long we keep your personal data for
                         </h3>
-                        <p>We retain your personal data for no longer than is necessary for the purpose(s) for which it was provided. What this means in practice will vary between different types of data. When determining the relevant retention periods, we take into account factors including:</p>
+                        <p className="px-5 ">We retain your personal data for no longer than is necessary for the purpose(s) for which it was provided. What this means in practice will vary between different types of data. When determining the relevant retention periods, we take into account factors including:</p>
                         <ul className="px-5 list-disc">
                             <li>legal obligation(s) under applicable law to retain data for a certain period of time;</li>
                             <li> statute of limitations under applicable law;</li>
@@ -138,6 +138,60 @@ const PrivacyPolicy = () => {
                                 Otherwise, we securely erase your personal data from our systems when it is no longer needed.
                             </li>
                         </ul>
+                        <p className="px-5 ">Otherwise, we securely erase your personal data from our systems when it is no longer needed.</p>
+                    </div>
+                    <div className="text-justify">
+                        <h3 className="text-2xl py-2 font-bold">8. Your rights
+                        </h3>
+                        <p className="px-5 ">You have the following rights regarding your personal data:
+                        </p>
+                        <ul className="px-5 list-disc">
+                            <li><b>Right to be informed</b> You have the right to be provided with clear, transparent and easily understandable information about how we use your personal data and your rights. This is why we are providing you with the information in this Privacy Policy.</li>
+                            <li> <b>Right of access</b> You have the right to obtain access to your personal data (if we are processing it) and certain other information (similar to that provided in this Privacy Policy). This is so you are aware and can check that we are using your personal data in accordance with data protection law.</li>
+                            <li><b>Right to rectification</b> You are entitled to have your personal data corrected if it is inaccurate or incomplete.</li>
+                            <li><b>Right to erasure</b> This is also known as ‘the right to be forgotten’ and, in simple terms, enables you to request the deletion or removal of your personal data where there is no compelling reason for us to keep using it. This is not a general right to erasure; there are exceptions.
+                            </li>
+                            <li><b>Right to restrict processing</b> You have the right to ‘block’ or suppress further use of your personal data in certain circumstances. When processing is restricted, we can still store your personal data, but may not use it further. We keep lists of people who have asked for further use of their personal data to be ‘blocked’ to make sure the restriction is respected in future.</li>
+                            <li><b>Right to data portability</b> You have the right to obtain and reuse your personal data in a structured, commonly used and machine-readable format in certain circumstances. In addition, where certain conditions apply, you have the right to have such information transferred directly to a third party.</li>
+                            <li><b>Right to object</b> to processing You have the right to object to us processing your personal data for our legitimate business interests or for direct marketing purposes (including in each case any related profiling).</li>
+                            <li><b>Right to withdraw consent to processing</b> If you have given your consent to us to process your personal data for a particular purpose (for example, direct marketing), you have the right to withdraw your consent at any time (although if you do so, it does not mean that any processing of your personal data up to that point is unlawful)</li>
+                            <li><b>Right to make a complaint to the data protection authorities</b> You have the right to make a complaint to the Information Commissioner’s Office (ICO) if you are unhappy with how we have handled your personal data or believe our processing of your personal data does not comply with data protection law.</li>
+                        </ul>
+                        <p className="px-5 ">For more information about your rights or if you would like to exercise any of your rights, you are welcome to contact us at the contact details set out below in the footer.</p>
+                    </div>
+                    <div className="text-justify">
+                        <h3 className="text-2xl py-2 font-bold">9. How you can contact us
+                        </h3>
+                        <p className="px-5 ">If you would like to exercise your data protection rights or if you are unhappy with how we have handled your personal data, you may contact us by:
+                        </p>
+                        <ul className="px-5 list-disc">
+                            <li>emailing : ___________ </li>
+                            <li>writing to our address : ______</li>
+                            <li>submitting a message through our online contact form.</li>
+                        </ul>
+                        <p className="px-5 ">
+                            If you’re not satisfied with our response to any enquiry or complaint or believe our processing of your personal data does not comply with data protection law, you can make a complaint to the Information Commissioner’s Office (ICO) by:
+                        </p>
+                        <ul className="px-5 list-disc">
+                            <li>writing to Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF; </li>
+                            <li>calling 0303 123 1113; or</li>
+                            <li>submitting a message through the ICO’s website at: ico.org.uk..</li>
+                        </ul>
+                    </div>
+                    <div className="text-justify">
+                        <h3 className="text-2xl py-2 font-bold">10. Links to other websites
+                        </h3>
+                        <p className="px-5 ">Our website contains hyperlinks to websites owned and operated by third parties. This Privacy Policy does not apply to those other websites. We encourage you to read the privacy statements on the other websites you visit, as they will govern the use of any personal data you provide when visiting those websites. We do not accept any responsibility or liability for the privacy practices of such third-party websites and your use of such websites is at your own risk.
+                        </p>
+                    </div>
+                    <div className="text-justify">
+                        <h3 className="text-2xl py-2 font-bold">11. Changes to this Privacy Policy
+                        </h3>
+                        <p className="px-5 ">This Privacy Policy was last updated on 17 January 2019
+<br/>
+                            This Privacy Policy may be updated from time to time so you may wish to check it each time you provide personal data to us. We won’t alert you to minor changes, but if there are any major changes, we will let you know and where appropriate ask for your consent.
+
+                        </p>
                     </div>
                 </div>
             </div>
