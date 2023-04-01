@@ -5,8 +5,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useSelector, useDispatch } from 'react-redux';
 import { addDetails, removeDetails } from '../../redux/slice/userDetails';
-
-
 const StartFunding = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate()

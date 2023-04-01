@@ -41,7 +41,6 @@ function App() {
         <Route path="/projects/active" element={<ActiveProject />} />
         <Route path="/projects/old" element={<OldProject />} />
         <Route path="/faqs" element={<FAQs />} />
-       
         <Route path="/privacy_policy" element={<PrivacyPolicy />} />
         <Route path="/terms_&_conditions" element={<TermsConditions />} />
         {/* <Route path="/add_Payment_now" element={<Payment />} /> */}

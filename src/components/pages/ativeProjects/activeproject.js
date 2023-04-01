@@ -10,7 +10,7 @@ const ActiveProject = () => {
     const [project, setProjects] = useState([]);
     const getProjects = async () => {
         try {
-            await axios.get("/index.php?action=get_projects").then((resp) => {
+            await axios.get("/index.php?action=get_projects&proj_status=1").then((resp) => {
                 console.log("get detail project result is", resp.data.data);
                 if (resp.status == "200") {
                     setProjects(resp.data.data);
