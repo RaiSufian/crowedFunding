@@ -15,7 +15,7 @@ const CheckOut = () => {
 
     }
     const validationSchema = Yup.object({
-        investprice: Yup.number().min(5000, "you can min £5,000 amount").max(50000, "you can add max £5,00,000 amount").required("Please add investment amount here"),
+        investprice: Yup.number().required("Please add investment amount here").min(5000, "you can min £5,000 ").max(500001, "you can add max £5,00,000"),
         paymethod: Yup.string().required("Please select paymethod method"),
         payID: Yup.string().required("Please add paymethod first")
     })
