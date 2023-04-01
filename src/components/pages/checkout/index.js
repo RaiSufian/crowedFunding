@@ -57,12 +57,12 @@ const CheckOut = () => {
                         <Icon icon="material-symbols:arrow-back-ios-new-rounded" className="text-2xl" /> <span className="pr-2">Back</span>
                     </button>
                 </div>
-                <div className="flex gap-3 py-5">
+                <div className="lg:flex gap-3 py-5 px-2">
                     <div className="flex-1 bg-gray-100 p-3">
                         <div className="">
                             <div className="">
                                 <h3 className="text-gray-700 text-2xl py-3 font-semibold ">Project Info</h3>
-                                <div className="flex p-5 bg-gray-100 gap-3 rounded">
+                                <div className="md:flex p-5 bg-gray-100 gap-3 rounded">
                                     <div className="flex-1">
                                         <img src={project.project_gallery[0].pgal_image} alt={project.project_gallery[0].pgal_title} className="w-full rounded" />
                                     </div>
@@ -90,48 +90,48 @@ const CheckOut = () => {
                             </div>
                             <div className="">
                                 <h3 className="text-gray-700 text-2xl py-3 font-semibold ">Prosonal Info</h3>
-                                <div className="p-5 bg-gray-100 gap-3 rounded">
-                                    <ul className="flex flex-wrap font-mont">
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">Name:</span>
-                                            <span className="flex-1">{userDetails.name}</span>
+                                <div className="md:p-5 p-1 bg-gray-100 gap-3 rounded">
+                                    <ul className="md:flex flex-wrap font-mont">
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">Name:</span>
+                                            <span className="flex-1 md:text-md text-sm">{userDetails.name}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">Email:</span>
-                                            <span className="flex-1">{userDetails.email}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">Email:</span>
+                                            <span className="flex-1 md:text-md text-sm">{userDetails.email}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">Phone:</span>
-                                            <span className="flex-1">{userDetails.phone}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">Phone:</span>
+                                            <span className="flex-1 md:text-md text-sm">{userDetails.phone}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">DOB:</span>
-                                            <span className="flex-1">{userDetails.DOB}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">DOB:</span>
+                                            <span className="flex-1 md:text-md text-sm">{userDetails.DOB}</span>
                                         </li>
 
-                                        <li className="flex items-end pt-2 w-full">
-                                            <span className="text-lg font-semibold flex-1">Address:</span>
+                                        <li className="flex items-start pt-2 w-full">
+                                            <span className="md:text-lg text-md font-semibold flex-1">Address:</span>
                                             <span className=" w-3/4">{userDetails.address}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">House no:</span>
-                                            <span className="flex-1">{userDetails.houseNo}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">House no:</span>
+                                            <span className="flex-1 md:text-md text-sm">{userDetails.houseNo}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">Street Name:</span>
-                                            <span className="flex-1"> {userDetails.streetNo}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">Street Name:</span>
+                                            <span className="flex-1 md:text-md text-sm"> {userDetails.streetNo}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">Country:</span>
-                                            <span className="flex-1"> {userDetails.country}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">Country:</span>
+                                            <span className="flex-1 md:text-md text-sm"> {userDetails.country}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">State:</span>
-                                            <span className="flex-1">{userDetails.state}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">State:</span>
+                                            <span className="flex-1 md:text-md text-sm">{userDetails.state}</span>
                                         </li>
-                                        <li className="flex items-end pt-2 w-1/2">
-                                            <span className="text-lg font-semibold flex-1">City:</span>
-                                            <span className="flex-1">{userDetails.city}</span>
+                                        <li className="flex items-start pt-2 md:w-1/2">
+                                            <span className="md:text-lg text-md font-semibold flex-1">City:</span>
+                                            <span className="flex-1 md:text-md text-sm">{userDetails.city}</span>
                                         </li>
                                     </ul>
 
@@ -140,7 +140,7 @@ const CheckOut = () => {
 
                         </div>
                     </div>
-                    <div className="w-1/3">
+                    <div className="lg:w-1/3 md:w-1/2 ld:pt-0 pt-5">
                         <form onSubmit={formik.handleSubmit}>
                             <div>
                                 <h3 className="text-gray-700 text-2xl pb-3 font-semibold ">Add Amount</h3>

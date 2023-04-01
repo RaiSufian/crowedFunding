@@ -80,3 +80,8 @@ input:focus-visible {
   position: sticky;
   top: 0;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}

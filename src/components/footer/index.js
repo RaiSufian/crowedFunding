@@ -37,6 +37,10 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <hr />
+            <div className="text-center text-white">
+                Copyright © 2023 CapitalRise. All Rights Reserved.
+            </div>
         </div>
     )
 }
