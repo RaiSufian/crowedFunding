@@ -11,17 +11,17 @@ const ProjectSlider = ({ aboutPage }) => {
     const getProjects = async () => {
         try {
             await axios.get("/index.php?action=get_projects").then((resp) => {
-                console.log("get detail project result is", resp.data.data);
+                console.log("get project list", resp.data.data);
                 if (resp.status == "200") {
                     setProjects(resp.data.data);
                     dispatch(endload());
                 }
             }).error((e) => {
-                console.log("get project api error", e)
+                console.log("get project list api error", e)
             })
         }
         catch (error) {
-            console.log("get project api error", error);
+            console.log("get project list catch error", error);
         }
     }
 
