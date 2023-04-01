@@ -157,11 +157,10 @@ const CheckOut = () => {
                                                 <div className="text-red-600 absolute top-full text-sm">{formik.errors.investprice}</div>
                                             ) : null}
                                         </div>
-                                        <p className="mt-5 text-sm"><b>Note: </b>You can add min £5,000 and max £50,000 for investment</p>
+                                        <p className="mt-5 text-sm"><b>Note: </b>You can add min £5,000 and max £5,00,000 for investment</p>
                                     </div>
                                 </div>
                             </div>
-
                             <div>
                                 <h3 className="text-gray-700 text-2xl py-5 font-semibold ">Add Payment</h3>
                                 <div className="p-2 border rounded ">
