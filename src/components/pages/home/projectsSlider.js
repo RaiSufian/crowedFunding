@@ -16,7 +16,7 @@ const ProjectSlider = ({ aboutPage }) => {
                 dispatch(endload());
             }
         }).catch((e) => {
-            // console.log("get project api error", e)
+            console.log("get project api error", e)
         })
     }
 
