@@ -9,24 +9,21 @@ const ProjectSlider = ({ aboutPage }) => {
     const dispatch = useDispatch();
     const [project, setProjects] = useState([]);
     const getProjects = async () => {
-        try {
-            await axios.get("/index.php?action=get_projects").then((resp) => {
-                console.log("get project list", resp.data.data);
-                if (resp.status == "200") {
-                    setProjects(resp.data.data);
-                    dispatch(endload());
-                }
-            }).error((e) => {
-                console.log("get project list api error", e)
-            })
-        }
-        catch (error) {
-            console.log("get project list catch error", error);
-        }
+        await axios.get("/index.php?action=get_projects").then((resp) => {
+            console.log("get project list", resp.data.data);
+            if (resp.status == "200") {
+                setProjects(resp.data.data);
+                dispatch(endload());
+            }
+        }).catch((e) => {
+            console.log("get project api error", e)
+        })
     }
 
+
+
     useEffect(() => {
-         dispatch(startload());
+        dispatch(startload());
         getProjects();
     }, [])
     var settings = {
