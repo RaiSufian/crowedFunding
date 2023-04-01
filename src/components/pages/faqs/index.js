@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import * as te from 'tw-elements';
 
+
+
 const FAQs = () => {
+   
     return (
         <>
             <div className="contact_bread_crumb lg:py-8 lg:py-6 py-4 bg-gray-100 border-b  border-gray-200 px-2">

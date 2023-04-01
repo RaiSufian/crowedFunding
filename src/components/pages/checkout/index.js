@@ -3,12 +3,15 @@ import { Icon } from '@iconify/react';
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+
 const CheckOut = () => {
+    const project = useSelector((state) => state.activeproject.project);
+    // console.log("curent project", project);
 
     const userDetails = useSelector((state) => state.userDetails.user);
     const navigate = useNavigate()
     const [payMethod, setPayMethod] = useState(null);
-    console.log("paymethod is", payMethod)
+    // console.log("paymethod is", payMethod)
     return (
         <>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
@@ -40,25 +43,25 @@ const CheckOut = () => {
                                 <h3 className="text-gray-700 text-2xl py-3 font-semibold ">Project Info</h3>
                                 <div className="flex p-5 bg-gray-100 gap-3 rounded">
                                     <div className="flex-1">
-                                        <img src="/images/property1.jpg" alt="pro_img" className="w-full rounded" />
+                                        <img src={project.project_gallery[0].pgal_image} alt={project.project_gallery[0].pgal_title} className="w-full rounded" />
                                     </div>
                                     <div className="flex-1">
-                                        <h4 className="text-2xl font-semibold">Abu Samra Al Aamriya Riyadah</h4>
+                                        <h4 className="text-2xl font-semibold">{project.proj_name}</h4>
                                         <p className="pt-3 flex items-center gap-1">
-                                            <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500" />Residential Plot
+                                            <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500" />{project.proj_status == 1 ? "Residential Plot" : "Commercial "}
                                         </p>
-                                        <p className="pt-3 flex items-center gap-1">
-                                            <Icon icon="material-symbols:location-on-outline" className="text-2xl text-gray-500" />1A Frognal, Hampstead, London, NW3 6AL
+                                        <p className="pt-3 flex items-start gap-1">
+                                            <Icon icon="material-symbols:location-on-outline" className="text-2xl text-gray-500" />{project.proj_location}
                                         </p>
                                         <ul className="py-2">
                                             <li className="mt-2 flex gap-2 items-center justify-between">
-                                                <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Total Investment -</h6> <span className="text-md text-blck">£ 5,00,000</span>
+                                                <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Total Investment -</h6> <span className="text-md text-blck">£ {project.proj_loan}</span>
                                             </li>
                                             <li className="mt-2 flex gap-2 items-center justify-between">
-                                                <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Loan Required -</h6> <span className="text-md text-blck">£ 3,50,000</span>
+                                                <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Loan Required -</h6> <span className="text-md text-blck">£ {project.proj_investment}</span>
                                             </li>
                                             <li className="mt-2 flex gap-2 items-center justify-between">
-                                                <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Developers Investment -</h6> <span className="text-md text-blck">£ 1,50,000</span>
+                                                <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Developers Investment -</h6> <span className="text-md text-blck">£ {project.proj_developer_investment}</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -116,29 +119,46 @@ const CheckOut = () => {
 
                         </div>
                     </div>
-                    <div className="w-1/3 pt-3">
-                        <h3 className="text-gray-700 text-2xl py-3 font-semibold ">Add Payment</h3>
-                        <div className="p-2 border rounded ">
-                            <div className="flex gap-3 items-center py-2">
-                                <input type="radio" value="paypal" name="pay" onChange={(e) => setPayMethod(e.target.value)} /><span className="text-xl font-semibold">Pay Pal</span>
+                    <div className="w-1/3">
+                        <div>
+                            <h3 className="text-gray-700 text-2xl pb-3 font-semibold ">Add Amount</h3>
+                            <div className="p-2 border rounded ">
+                                <p>Investment amount</p>
+                                <div>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3 bg-gray-600  rounded-md rounded-r-none">
+                                            <span className="text-gray-500 sm:text-sm text-white">£</span>
+                                        </div>
+                                        <input type="text" name="price" id="price" className=" h-11 block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:border-gray-600 sm:text-sm sm:leading-6" placeholder="0.00" />
+                                    </div>
+                                </div>
                             </div>
-                            {payMethod == "paypal" ?
-                                <>
-                                    <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F7C039]">
-                                        <img src="/images/payoal.png" className="w-[100px]" />
+                        </div>
+
+                        <div>
+                            <h3 className="text-gray-700 text-2xl py-5 font-semibold ">Add Payment</h3>
+                            <div className="p-2 border rounded ">
+                                <div className="flex gap-3 items-center py-2">
+                                    <input type="radio" value="paypal" name="pay" onChange={(e) => setPayMethod(e.target.value)} /><span className="text-xl font-semibold">Pay Pal</span>
+                                </div>
+                                {payMethod == "paypal" ?
+                                    <>
+                                        <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F7C039]">
+                                            <img src="/images/payoal.png" className="w-[100px]" />
+                                        </button>
+                                    </> : ""}
+
+                                <hr />
+                                <div className="flex gap-3 items-center py-2">
+                                    <input type="radio" value="payowner" name="pay" onChange={(e) => setPayMethod(e.target.value)} /><span className="text-xl font-semibold">Payowner</span>
+                                </div>
+                                {payMethod == "payowner" ? <>
+                                    <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F2F2F2]">
+                                        <img src="/images/payoneer.png" className="w-[100px]" />
                                     </button>
                                 </> : ""}
 
-                            <hr />
-                            <div className="flex gap-3 items-center py-2">
-                                <input type="radio" value="payowner" name="pay" onChange={(e) => setPayMethod(e.target.value)} /><span className="text-xl font-semibold">Payowner</span>
                             </div>
-                            {payMethod == "payowner" ? <>
-                                <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F2F2F2]">
-                                    <img src="/images/payoneer.png" className="w-[100px]" />
-                                </button>
-                            </> : ""}
-
                         </div>
 
                     </div>

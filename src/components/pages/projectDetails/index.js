@@ -1,8 +1,20 @@
 import Slider from 'react-slick';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
-import ProjectCard from '../home/projectsSlider'
+import ProjectCard from '../home/projectsSlider';
+import { endload, startload } from '../../redux/slice/loader';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProject } from '../../redux/slice/project'
+import axios from "axios";
 const ProjectDetails = () => {
+
+    const [details, setDetails] = useState({});
+    const [detailImg, setDetailsImg] = useState([]);
+    const dispatch = useDispatch();
+    const { id } = useParams();
+
     const settings = {
         dots: true,
         infinite: true,
@@ -10,11 +22,33 @@ const ProjectDetails = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    const getProjectDetails = async () => {
+        try {
+            await axios.get(`/index.php?action=get_projects&proj_id=${id}`).then((resp) => {
+
+                if (resp.status) {
+                    // console.log("get project details data is 1", resp.data.data[0].project_gallery);
+                    setDetails(resp.data.data[0]);
+                    dispatch(endload());
+                    setDetailsImg(resp.data.data[0].project_gallery);
+                    dispatch(addProject(resp.data.data[0]));
+                }
+
+            })
+        }
+        catch (error) {
+            console.log("get project data error", error)
+        }
+    }
+    useEffect(() => {
+        dispatch(startload());
+        getProjectDetails();
+    }, [])
     return (
         <>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
-                    <h1 className=" text-4xl px-2">Property Investment Information
+                    <h1 className=" text-4xl px-2">Project Investment Information
                     </h1>
                     <span className="px-2 mt-3 text-gray-500 text-md">We provide Amazing Services</span>
                     <ul className="absolute top-1/4 right-0 flex gap-2 text-sm text-gray-700">
@@ -30,29 +64,17 @@ const ProjectDetails = () => {
             </div>
             <section className="py-10">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont px-2">
-
                     <div className="lg:flex gap-2 relative">
                         <div className="lg:w-[65%] w-full">
                             <div className="">
                                 <Slider {...settings}>
-                                    <div className="">
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
-                                    </div>
-                                    <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
-                                    </div>
-                                    <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
-                                    </div>
-                                    <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
-                                    </div>
-                                    <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
-                                    </div>
-                                    <div>
-                                        <img src="/images/property1.jpg" className="h-96 w-full object-cover rounded-lg" alt="pro_img" />
-                                    </div>
+                                    {detailImg.map((item, index) => {
+                                        return (
+                                            <div className="" key={index}>
+                                                <img src={item.pgal_image} className="h-96 w-full object-cover rounded-lg" alt={item.pgal_title} />
+                                            </div>
+                                        )
+                                    })}
                                 </Slider>
                             </div>
                             <div className="border rounded-sm border-gray-200 p-4 mt-4">
@@ -60,15 +82,15 @@ const ProjectDetails = () => {
                                 <ul className="pt-3">
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Minimum Investment Loan Amount - </span>
-                                        <span className="flex-1">£ 500</span>
+                                        <span className="flex-1">£ {details.proj_min_loan}</span>
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Profits assumed - </span>
-                                        <span className="flex-1">28% Upwards by Developer</span>
+                                        <span className="flex-1">{details.proj_profit}</span>
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Term -  </span>
-                                        <span className="flex-1">16 months (with the ability to pay back early)</span>
+                                        <span className="flex-1">{details.proj_term}</span>
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Returns Promised - </span>
@@ -76,11 +98,11 @@ const ProjectDetails = () => {
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Payment Return - </span>
-                                        <span className="flex-1">End of term</span>
+                                        <span className="flex-1">{details.proj_payment_return}</span>
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Borrower Type –  </span>
-                                        <span className="flex-1">Experienced developer</span>
+                                        <span className="flex-1">{details.proj_borrower_type}</span>
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Security Available -  </span>
@@ -88,7 +110,7 @@ const ProjectDetails = () => {
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Risk Accessment -  </span>
-                                        <span className="flex-1">Higher Risk</span>
+                                        <span className="flex-1">{details.proj_risk_accessment}</span>
                                     </li>
                                 </ul>
                                 <p className="pt-3 font-semibold text-gray-500"><strong className="text-black">Note: </strong>* Your capital is at risk and returns are not guaranteed.  Please read the Investment Memorandum before investing.
@@ -96,23 +118,14 @@ const ProjectDetails = () => {
                             </div>
                             <div className="border rounded-sm border-gray-200 p-4 mt-4">
                                 <h3 className="text-xl font-semibold ">INVESTMENT SUMMARY</h3>
-                                <ul className="list-disc pl-3 pt-3">
-                                    <li>
-                                        This is a 16 month residential peer to peer loan opportunity, offering no security to small investors.
-                                    </li>
-                                    <li>The property will be purchased at Land Auction coming up Soon. Auction Start price is 50,000 without Planning and Developer expect to buy the Land at the cost price of 80K max.</li>
-                                    <li>The Developer after buying the plot will put in a Planning application for 2 bedroom Detached Chalet Bungalow with local council.</li>
-                                    <li>The Chances of getting Planning application approved is 99%, as confirmed by Developer. (We will hold the Loan money in our account till the Developer does not get Planning approved, incase of no approval, we will return the money to all the investors as registered and paid.)</li>
-                                    <li>In the Complete Builders Pack, we will send you all the details from buying the Plot to the final Building Construction and Selling. Monthly Reports will be sent to all investors.</li>
-                                    <li>The Developer is expecting a high return of 28% upwards due to the risk he is taking by buying a plot without Planning. He is willing to share profits with all the investors as per their loan investments.</li>
-                                    <li>Whilst the term for this investment is 16 months, this project may finish sooner. </li>
-                                </ul>
+                                <div
+                                    dangerouslySetInnerHTML={{ __html: details.proj_investment_summary }}
+                                />
                             </div>
                         </div>
-                        <div className="lg:w-[35%] w-full h-screen sticky top-8">
+                        <div className="lg:w-[35%] w-full lg:h-screen lg:sticky top-8 pt-5 lg:pt-0">
                             <div className="border rounded-sm border-gray-200 p-3 relative">
-                                <h1 className="font-semibold text-2xl font-lato pr-3">Abu Samra Al Aamriya
-                                    Riyadah</h1>
+                                <h1 className="font-semibold text-2xl font-lato pr-3">{details.proj_name}</h1>
                                 <p className="pt-3 flex items-center gap-1">
                                     <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500" />Residential Plot
                                 </p>

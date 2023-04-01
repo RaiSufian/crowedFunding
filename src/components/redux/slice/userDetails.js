@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     user: null,
@@ -20,7 +20,7 @@ export const userDetail = createSlice({
 
 // Action creators are generated for each case reducer function
 
-console.log("current actions", userDetail.actions);
+
 export const { addDetails, removeDetails } = userDetail.actions
 
 export default userDetail.reducer

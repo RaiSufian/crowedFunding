@@ -298,24 +298,23 @@ const StartFunding = () => {
                                 ) : null}
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-4 ">
-                                <input type="checkbox" value={formik.values.TerCon} onChange={formik.handleChange} onBlur={formik.handleBlur} name="TerCon"  checked={formik.values.TerCon ? "true" : ""}/> <Link to="/"><span className="text-sm">Terms & Conditions</span></Link>
+                                <input type="checkbox" value={formik.values.TerCon} onChange={formik.handleChange} onBlur={formik.handleBlur} name="TerCon" checked={formik.values.TerCon ? "true" : ""} /> <Link to="/terms_&_conditions"><span className="text-sm">Terms & Conditions</span></Link>
                                 {formik.touched.TerCon && formik.errors.TerCon ? (
                                     <span className="text-red-500  text-sm">{formik.errors.TerCon}</span>
                                 ) : null}
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-2">
-                                <input type="checkbox" value={formik.values.disc} onChange={formik.handleChange} onBlur={formik.handleBlur} name="disc" checked={formik.values.disc ? "true" : ""}/> You need to check <Link className="text-sm"  >Disclaimer</Link>
+                                <input type="checkbox" value={formik.values.disc} onChange={formik.handleChange} onBlur={formik.handleBlur} name="disc" checked={formik.values.disc ? "true" : ""} /> You need to check <Link className="text-sm" to="/disclaimer" >Disclaimer</Link>
                                 {formik.touched.disc && formik.errors.disc ? (
                                     <span className="text-red-500  text-sm">{formik.errors.disc}</span>
                                 ) : null}
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-2">
-                                <input type="checkbox" value={formik.values.agree} onChange={formik.handleChange} onBlur={formik.handleBlur} name="agree" checked={formik.values.agree ? "true" : ""}/> Check  <Link className="text-sm " >agreement </Link>
+                                <input type="checkbox" value={formik.values.agree} onChange={formik.handleChange} onBlur={formik.handleBlur} name="agree" checked={formik.values.agree ? "true" : ""} /> Check  <Link className="text-sm " >agreement </Link>
                                 {formik.touched.agree && formik.errors.agree ? (
                                     <span className="text-red-500  text-sm">{formik.errors.agree}</span>
                                 ) : null}
                             </div>
-
                             <div className="pt-8 w-full px-2 ">
                                 <button type="submit" className="min-w-1/4 bg-blue-500 text-white py-3 px-8 text-xl hover:bg-[#ffa500] rounded">Proceed to Payment Page </button>
                             </div>

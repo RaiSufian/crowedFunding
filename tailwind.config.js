@@ -14,6 +14,15 @@ module.exports = {
           '0%': { transform: 'translateY(-100%)' },
           '100%': { transform: 'translateY(0%)' },
         }
+      },
+      animation: {
+        'dropdown': 'wiggle 0.3s ease-out',
+      },
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'translateY(10px)' },
+          '100%': { transform: 'translate(0px)' },
+        }
       }
     },
     fontFamily: {
