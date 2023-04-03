@@ -38,8 +38,8 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <div className="text-center text-white">
-                Copyright © 2023 CapitalRise. All Rights Reserved.
+            <div className="text-center text-white py-1 text-sm">
+                Copyright © 2023 to 2024 vcrowdfund. All Rights Reserved.
             </div>
         </div>
     )

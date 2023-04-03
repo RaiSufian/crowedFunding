@@ -5,8 +5,51 @@ import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 const CheckOut = () => {
+
+    const [show, setShow] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [ErrorMessage, setErrorMessage] = useState("");
+    const [orderID, setOrderID] = useState(false);
+    // creates a paypal order
+    const createOrder = (data, actions) => {
+        return actions.order
+            .create({
+                purchase_units: [
+                    {
+                        description: "Sunflower",
+                        amount: {
+                            currency_code: "USD",
+                            value: 0.01,
+                        },
+                    },
+                ],
+                // not needed if a shipping address is actually needed
+                application_context: {
+                    shipping_preference: "NO_SHIPPING",
+                },
+            })
+            .then((orderID) => {
+                setOrderID(orderID);
+                console.log("order id after complete paypal", orderID);
+                return orderID;
+            });
+    };
+    // check Approval
+    const onApprove = (data, actions) => {
+        return actions.order.capture().then(function (details) {
+            const { payer } = details;
+            setSuccess(true);
+            console.log("complete order object", details);
+            console.log("payment down is", payer);
+         
+        });
+    };
+    //capture likely error
+    const onError = (data, actions) => {
+        setErrorMessage("An Error occured with your payment ");
+    };
 
     const initialValues = {
         investprice: 0,
@@ -26,13 +69,13 @@ const CheckOut = () => {
     const userDetails = useSelector((state) => state.userDetails.user);
     const navigate = useNavigate()
 
-
-
     const formik = useFormik({
         initialValues,
         validationSchema,
         onSubmit,
     });
+
+
     return (
         <>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
@@ -169,9 +212,12 @@ const CheckOut = () => {
                                     </div>
                                     {formik.values.paymethod == "paypal" ?
                                         <>
-                                            <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F7C039]">
-                                                <img src="/images/payoal.png" className="w-[100px]" />
-                                            </button>
+                                            <PayPalScriptProvider options={{
+                                                "client-id": "ARStuUYQbcASxDxdDou3gF_x8UqRIBpdL6zPikbnWxPPI68pQSaXoLkIK0hKOXSN4gHU8HdSH7OuAg6x",
+                                            }}>
+                                                <PayPalButtons createOrder={createOrder}
+                                                    onApprove={onApprove} />
+                                            </PayPalScriptProvider>
                                         </> : ""}
 
                                     <hr />

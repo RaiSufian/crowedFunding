@@ -7,7 +7,9 @@ const ProjectCard = ({ value }) => {
                 <img src={value?.project_gallery[0]?.pgal_image} className="h-36 w-full object-cover" />
                 <div className="md:h-28 h-36">
                     <h4 className="px-3 pt-3 text-xl font-semibold">{value.proj_name}</h4>
-                    <p className="px-3 text-sm "> COMING TO PLATFORM*** COMING TO PLATFORM *** Short-term refurbishment opportunity.  ISA friendly investment. </p>
+                    <p className="px-3 text-sm ">  <div
+                        dangerouslySetInnerHTML={{ __html:value.pro_short_description }}
+                    /> </p>
                 </div>
                 <div className="px-2">
                     <p className="font-bold text-center  m-1 pb-1">0 Hour to go - 100.00%</p>

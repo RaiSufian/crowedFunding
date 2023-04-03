@@ -85,3 +85,13 @@ input:focus-visible {
 .slick-next:before {
   color: black !important;
 }
+
+.container {
+  overflow: hidden;
+}
+
+.slick-slider {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}

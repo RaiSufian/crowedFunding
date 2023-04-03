@@ -94,7 +94,7 @@ const ProjectDetails = () => {
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Returns Promised - </span>
-                                        <span className="flex-1">Approximately 20% minimum return (Subject to Market Conditions and All going well)</span>
+                                        <span className="flex-1">{details.proj_return_promised}</span>
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Payment Return - </span>
@@ -130,7 +130,7 @@ const ProjectDetails = () => {
                                     <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500" />Residential Plot
                                 </p>
                                 <p className="pt-3 flex items-center gap-1">
-                                    <Icon icon="material-symbols:location-on-outline" className="text-2xl text-gray-500" />1A Frognal, Hampstead, London, NW3 6AL
+                                    <Icon icon="material-symbols:location-on-outline" className="text-2xl text-gray-500" />{details.proj_location}
                                 </p>
                                 <div className="absolute top-3 right-3">
                                     <Icon icon="mdi:favorite-border" className="text-4xl text-red-400" />

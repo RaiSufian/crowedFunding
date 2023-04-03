@@ -10,7 +10,7 @@ const ProjectSlider = ({ aboutPage }) => {
     const [project, setProjects] = useState([]);
     const getProjects = async () => {
         try {
-            await axios.get("/index.php?action=get_projects&proj_featured").then((resp) => {
+            await axios.get("/index.php?action=get_projects&proj_featured=1").then((resp) => {
                 console.log("get project list", resp.data.data);
                 if (resp.status == "200") {
                     setProjects(resp.data.data);
@@ -30,14 +30,15 @@ const ProjectSlider = ({ aboutPage }) => {
         getProjects();
     }, [])
     var settings = {
-        dots: false,
-        infinite: true,
+        loop: true,
+        dots: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         initialSlide: 0,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -63,19 +64,21 @@ const ProjectSlider = ({ aboutPage }) => {
             }
         ]
     };
-
     return (
         <div className="mx-auto  px-4 py-6 pt-0">
             <h2 className="px-3 md:text-3xl text-2xl md:py-5 py-2 font-bold">{aboutPage}</h2>
-            <Slider {...settings}>
-                {project.map((items, index) => {
-                    return (
-                        <div className="mx-auto" key={index}>
-                            <ProjectCard value={items} />
-                        </div>
-                    )
-                })}
-            </Slider>
+            <div className="mx-auto xl:w-[1100px] w-full" >
+                <Slider {...settings}>
+                    {project.map((items, index) => {
+                        return (
+                            <div className="mx-auto" key={index}>
+                                <ProjectCard value={items} />
+                            </div>
+                        )
+                    })}
+                </Slider>
+            </div>
+
         </div >
     )
 }
