@@ -18,6 +18,7 @@ import OldProject from "./components/pages/oldProjects";
 import TermsConditions from "./components/pages/termsConditions";
 import Disclaimer from "./components/pages/disclaimer";
 import Loader from "./components/loader";
+import ThankYou from "./components/pages/thankYou/thankyou";
 
 
 
@@ -46,6 +47,7 @@ function App() {
         {/* <Route path="/add_Payment_now" element={<Payment />} /> */}
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/thankyou" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Provider } from 'react-redux';
 import { store } from './components/redux/store';
 import axios from "axios";
+import 'react-toastify/dist/ReactToastify.css';
 axios.defaults.baseURL = "https://www.vcrowdfund.com/api";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,17 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Icon } from '@iconify/react';
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFormik } from "formik";
+import { ToastContainer, toast } from 'react-toastify';
 import * as Yup from "yup";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-const CheckOut = () => {
+import axios from "axios";
 
+const CheckOut = () => {
     const [show, setShow] = useState(false);
     const [success, setSuccess] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
     const [orderID, setOrderID] = useState(false);
+    const [orderpay, setOrderpay] = useState("");
     // creates a paypal order
     const createOrder = (data, actions) => {
         return actions.order
@@ -42,8 +44,19 @@ const CheckOut = () => {
             const { payer } = details;
             setSuccess(true);
             console.log("complete order object", details);
-            console.log("payment down is", payer);
-
+            // console.log("payment down is", payer);
+            formik.values.payID = details.id;
+            setOrderpay(formik.values.investprice);
+            toast.success('Payment added successfully', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
         });
     };
     //capture likely error
@@ -58,12 +71,28 @@ const CheckOut = () => {
 
     }
     const validationSchema = Yup.object({
-        investprice: Yup.number().required("Please add investment amount here").min(500, "you can min £5,000 ").max(50000, "you can add max £5,00,000"),
+        investprice: Yup.number().required("Please add investment amount here").min(500, "you can add min £5,000 ").max(50000, "you can add max £5,00,000"),
         paymethod: Yup.string().required("Please select paymethod method"),
         payID: Yup.string().required("Please add paymethod first")
     })
     const onSubmit = () => {
-        alert("submit done")
+        const params = {
+            username: userDetails.email,
+            project_id: project.proj_id,
+            ref_code: formik.values.payID,
+            payment: formik.values.investprice,
+            paymethod: formik.values.paymethod
+
+        }
+        console.log("my params is", params);
+        axios.post(`/index.php?action=add_investment&confirm_user_name=${userDetails.email}&proj_id=${project.proj_id}&pi_referance_code=${formik.values.payID}&pi_payment=${orderpay}&pi_type=${formik.values.paymethod}&pi_status=1&user_fname=${userDetails.name}&user_phone=${userDetails.phone}&user_dob=${userDetails.DOB}&user_house_no=${userDetails.houseNo}&user_address=${userDetails.address}&user_street=${userDetails.streetNo}&user_town=${userDetails.townName}&countrie=${userDetails.country}&user_state=${userDetails.state}&user_city=${userDetails.city}`).then((resp) => {
+            console.log("add payment result", resp)
+            if (resp.status == "200") {
+                navigate("/thankyou");
+            }
+        }).error((e) => {
+            console.log("add payment result error", e)
+        })
     }
     const project = useSelector((state) => state.activeproject.project);
     const userDetails = useSelector((state) => state.userDetails.user);
@@ -74,10 +103,27 @@ const CheckOut = () => {
         validationSchema,
         onSubmit,
     });
+    // console.log("my current values", );
+    useEffect(() => {
+        if (formik.values.investprice < 500 && formik.values.paymethod != "") {
+            console.log("find ok")
+            toast.error('Plase set payment amount first', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
 
+    }, [formik.values.paymethod])
 
     return (
         <>
+            <ToastContainer />
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
                     <h1 className=" text-4xl px-2">Check Out
@@ -208,9 +254,15 @@ const CheckOut = () => {
                                 <h3 className="text-gray-700 text-2xl py-5 font-semibold ">Add Payment</h3>
                                 <div className="p-2 border rounded ">
                                     <div className="flex gap-3 items-center py-2">
-                                        <input value="paypal" onChange={formik.handleChange} onBlur={formik.handleBlur} type="radio" name="paymethod" /><span className="text-xl font-semibold">Pay Pal</span>
+                                        <input value="paypal"
+                                            onChange={formik.handleChange}
+                                            onBlur={formik.handleBlur}
+                                            type="radio"
+                                            name="paymethod"
+                                        />
+                                        <span className="text-xl font-semibold">Pay Pal</span>
                                     </div>
-                                    {formik.values.paymethod == "paypal" ?
+                                    {formik.values.paymethod == "paypal" && formik.values.investprice >= 500 ?
                                         <>
                                             <PayPalScriptProvider options={{
                                                 "client-id": "ARStuUYQbcASxDxdDou3gF_x8UqRIBpdL6zPikbnWxPPI68pQSaXoLkIK0hKOXSN4gHU8HdSH7OuAg6x",
@@ -219,17 +271,17 @@ const CheckOut = () => {
                                                 <PayPalButtons createOrder={createOrder}
                                                     onApprove={onApprove} />
                                             </PayPalScriptProvider>
-                                        </> : ""}
+                                        </> : null}
 
                                     <hr />
                                     <div className="flex gap-3 items-center py-2">
                                         <input onChange={formik.handleChange} onBlur={formik.handleBlur} type="radio" value="payowner" name="paymethod" /><span className="text-xl font-semibold">Payowner</span>
                                     </div>
-                                    {formik.values.paymethod == "payowner" ? <>
+                                    {formik.values.paymethod == "payowner" && formik.values.investprice >= 500 ? <>
                                         <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F2F2F2]">
                                             <img src="/images/payoneer.png" className="w-[100px]" />
                                         </button>
-                                    </> : ""}
+                                    </> : null}
                                     {formik.touched.paymethod && formik.errors.paymethod ? (
                                         <div className="text-red-600 top-full text-sm">{formik.errors.paymethod}</div>
                                     ) : null}
@@ -240,7 +292,8 @@ const CheckOut = () => {
                                 {formik.touched.payID && formik.errors.payID ? (
                                     <div className="text-red-600 top-full text-sm">{formik.errors.payID}</div>
                                 ) : null}
-                                <button className="py-2 text-center w-full bg-[#ffa500] text-white font-semibold shadow-md rounded-sm" type="submit">INVEST</button>
+                                {formik.values.payID ? <span className="font-semibold text-green-600 flex items-center gap-2"><Icon icon="clarity:success-standard-line" />Payment added successfully</span> : null}
+                                <button className="py-2 text-center w-full bg-[#ffa500] text-white font-semibold shadow-md rounded-sm tracking-widest text-lg" type="submit">SUBMIT</button>
                             </div>
                         </form>
 
