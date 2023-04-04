@@ -1,18 +1,26 @@
 import { Link } from "react-router-dom";
+import moment from 'moment';
 const ProjectCard = ({ value }) => {
+    const startdate = moment(value?.proj_cdate).format('YYYY-MM-DD');
+    const currentDate = moment();
+
+    const days = currentDate.diff(startdate, 'days')
+
+    console.log("data is dasy", days);
     return (
 
         <div className="w-full px-2 mt-5">
-            <div className="border border-[#ffa500]">
-                <img src={value?.project_gallery[0]?.pgal_image} className="h-36 w-full object-cover" />
+            <div className="border border-[#ffa500]  ">
+                <div className="h-48">
+                    <img src={value?.proj_logo} className="h-full w-full object-cover" />
+                </div>
+
                 <div className="md:h-28 h-36">
                     <h4 className="px-3 pt-3 text-xl font-semibold">{value.proj_name}</h4>
-                    <p className="px-3 text-sm ">  <div
-                        dangerouslySetInnerHTML={{ __html:value.pro_short_description }}
-                    /> </p>
+                    <p className="px-3 text-sm textOverflow">{value.pro_short_description} </p>
                 </div>
                 <div className="px-2">
-                    <p className="font-bold text-center  m-1 pb-1">0 Hour to go - 100.00%</p>
+                    <p className="font-bold text-center  m-1 pb-1">{days} days to go - 100.00%</p>
                     <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700 mb-3">
                         <div className="bg-[#ffa500] h-1.5 rounded-full w-[25%]"></div>
                     </div>

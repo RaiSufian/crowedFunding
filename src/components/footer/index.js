@@ -37,8 +37,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <hr />
-            <div className="text-center text-white py-1 text-sm">
+            <div className="border-t border-gray-600"></div>
+            <div className="text-center py-2 text-sm text-gray-400">
                 Copyright © 2023 to 2024 vcrowdfund. All Rights Reserved.
             </div>
         </div>

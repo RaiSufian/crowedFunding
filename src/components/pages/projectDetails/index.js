@@ -22,12 +22,25 @@ const ProjectDetails = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    const types = [{
+        id: 1,
+        name: "Residential Plot"
+    },
+    {
+        id: 2,
+        name: "Commercial Plot"
+    },
+    {
+        id: 3,
+        name: "Industrial Plot"
+    },
+    ]
     const getProjectDetails = async () => {
         try {
             await axios.get(`/index.php?action=get_projects&proj_id=${id}`).then((resp) => {
 
-                if (resp.status) {
-                    // console.log("get project details data is 1", resp.data.data[0].project_gallery);
+                if (resp.status == "200") {
+                    console.log("get project details data is 1", resp.status);
                     setDetails(resp.data.data[0]);
                     dispatch(endload());
                     setDetailsImg(resp.data.data[0].project_gallery);
@@ -66,7 +79,7 @@ const ProjectDetails = () => {
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont px-2">
                     <div className="lg:flex gap-2 relative">
                         <div className="lg:w-[65%] w-full">
-                            <div className="">
+                            {detailImg.length == 0 ? <img src={details.proj_logo} alt="primary_img" className="lg:h-96 md:h-60 h-52  w-full object-cover rounded-lg" /> : <div className="">
                                 <Slider {...settings}>
                                     {detailImg.map((item, index) => {
                                         return (
@@ -76,7 +89,8 @@ const ProjectDetails = () => {
                                         )
                                     })}
                                 </Slider>
-                            </div>
+                            </div>}
+
                             <div className="border rounded-sm border-gray-200 p-4 mt-4">
                                 <h3 className="text-xl font-semibold uppercase">Your Participation</h3>
                                 <ul className="pt-3">
@@ -126,15 +140,24 @@ const ProjectDetails = () => {
                         <div className="lg:w-[35%] w-full lg:h-screen lg:sticky top-8 pt-5 lg:pt-0">
                             <div className="border rounded-sm border-gray-200 p-3 relative">
                                 <h1 className="font-semibold text-2xl font-lato pr-3">{details.proj_name}</h1>
-                                <p className="pt-3 flex items-center gap-1">
-                                    <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500" />Residential Plot
+                                {types.map((item, index) => {
+                                    if (details.proj_type == item.id) {
+                                        console.log(details.proj_type, item.id);
+                                        return (
+                                            <p className="pt-3 flex items-start gap-1" key={index}>
+                                                <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500" />{item.name}
+                                            </p>
+                                        )
+                                    }
+
+                                })}
+
+                                <p className="pt-3 flex items-start gap-1">
+                                    <Icon icon="material-symbols:location-on-outline" className="text-4xl text-gray-500" />{details.proj_location}
                                 </p>
-                                <p className="pt-3 flex items-center gap-1">
-                                    <Icon icon="material-symbols:location-on-outline" className="text-2xl text-gray-500" />{details.proj_location}
-                                </p>
-                                <div className="absolute top-3 right-3">
+                                {/* <div className="absolute top-3 right-3">
                                     <Icon icon="mdi:favorite-border" className="text-4xl text-red-400" />
-                                </div>
+                                </div> */}
 
                             </div>
                             <div className="border rounded-sm border-gray-200 p-3 mt-4">

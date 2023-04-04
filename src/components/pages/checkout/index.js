@@ -18,10 +18,10 @@ const CheckOut = () => {
             .create({
                 purchase_units: [
                     {
-                        description: "Sunflower",
+                        description: "property investment with vcrowdfund",
                         amount: {
-                            currency_code: "USD",
-                            value: 0.01,
+                            currency_code: "GBP",
+                            value: formik.values.investprice,
                         },
                     },
                 ],
@@ -43,7 +43,7 @@ const CheckOut = () => {
             setSuccess(true);
             console.log("complete order object", details);
             console.log("payment down is", payer);
-         
+
         });
     };
     //capture likely error
@@ -58,7 +58,7 @@ const CheckOut = () => {
 
     }
     const validationSchema = Yup.object({
-        investprice: Yup.number().required("Please add investment amount here").min(5000, "you can min £5,000 ").max(500001, "you can add max £5,00,000"),
+        investprice: Yup.number().required("Please add investment amount here").min(500, "you can min £5,000 ").max(50000, "you can add max £5,00,000"),
         paymethod: Yup.string().required("Please select paymethod method"),
         payID: Yup.string().required("Please add paymethod first")
     })
@@ -200,7 +200,7 @@ const CheckOut = () => {
                                                 <div className="text-red-600 absolute top-full text-sm">{formik.errors.investprice}</div>
                                             ) : null}
                                         </div>
-                                        <p className="mt-5 text-sm"><b>Note: </b>You can add min £5,000 and max £5,00,000 for investment</p>
+                                        <p className="mt-5 text-sm"><b>Note: </b>You can add min £500 and max £50000 for investment</p>
                                     </div>
                                 </div>
                             </div>
@@ -214,6 +214,7 @@ const CheckOut = () => {
                                         <>
                                             <PayPalScriptProvider options={{
                                                 "client-id": "ARStuUYQbcASxDxdDou3gF_x8UqRIBpdL6zPikbnWxPPI68pQSaXoLkIK0hKOXSN4gHU8HdSH7OuAg6x",
+                                                "currency": "GBP"
                                             }}>
                                                 <PayPalButtons createOrder={createOrder}
                                                     onApprove={onApprove} />
