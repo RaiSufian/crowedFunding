@@ -153,7 +153,7 @@ const ProjectDetails = () => {
                                         console.log(details.proj_type, item.id);
                                         return (
                                             <p className="pt-3 flex items-start gap-1" key={index}>
-                                                <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500" />{item.name}
+                                                <Icon icon="teenyicons:search-property-outline" className="text-2xl text-gray-500 w-6" /><span className="flex-1">{item.name}</span>
                                             </p>
                                         )
                                     }
@@ -161,7 +161,7 @@ const ProjectDetails = () => {
                                 })}
 
                                 <p className="pt-3 flex items-start gap-1">
-                                    <Icon icon="material-symbols:location-on-outline" className="text-4xl text-gray-500" />{details.proj_location}
+                                    <Icon icon="material-symbols:location-on-outline" className="text-2xl text-gray-500 w-6" /><span className="flex-1">{details.proj_location}</span>
                                 </p>
                                 {/* <div className="absolute top-3 right-3">
                                     <Icon icon="mdi:favorite-border" className="text-4xl text-red-400" />
@@ -188,7 +188,7 @@ const ProjectDetails = () => {
                                 <div className="py-3">
                                     <div className="overInvester flex items-center justify-between text-xl font-semibold font-lato " >
                                         <span>£5,000</span>
-                                        <span>1</span>
+                                        <span>{details.total_investor}</span>
                                     </div>
                                     <div className="flex items-center justify-between text-[10px] py-2">
                                         <span>of £250k</span>
@@ -212,7 +212,7 @@ const ProjectDetails = () => {
                                         <div className="p-1 w-36 h-36 mx-auto rounded-full overflow-hidden mt-5">
                                             <img src="/images/darkLogo.jpg" className="h-full w-full rounded-full  shadow-md " />
                                         </div>
-                                        <h2 className="text-center text-xl font-semibold py-2 ">Company Name</h2>
+                                        <h2 className="text-center text-xl font-semibold py-2 ">V Crowd Fund</h2>
                                     </div>
                                 </div>
                             </div>
