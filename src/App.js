@@ -19,8 +19,8 @@ import TermsConditions from "./components/pages/termsConditions";
 import Disclaimer from "./components/pages/disclaimer";
 import Loader from "./components/loader";
 import ThankYou from "./components/pages/thankYou/thankyou";
-
-
+import Agreement from "./components/pages/agreement";
+import Riskstatement from "./components/pages/riskStatement/riskstatement";
 
 function App() {
 
@@ -44,8 +44,9 @@ function App() {
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/privacy_policy" element={<PrivacyPolicy />} />
         <Route path="/terms_&_conditions" element={<TermsConditions />} />
-        {/* <Route path="/add_Payment_now" element={<Payment />} /> */}
+        <Route path="/view_agreement" element={<Agreement />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/risk_statement" element={<Riskstatement />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/thankyou" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />

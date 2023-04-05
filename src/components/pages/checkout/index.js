@@ -71,7 +71,7 @@ const CheckOut = () => {
 
     }
     const validationSchema = Yup.object({
-        investprice: Yup.number().required("Please add investment amount here").min(500, "you can add min £5,000 ").max(50000, "you can add max £5,00,000"),
+        investprice: Yup.number().required("Please add investment amount here").min(500, "min £500 amount required").max(50000, "max £50,000 amount required"),
         paymethod: Yup.string().required("Please select paymethod method"),
         payID: Yup.string().required("Please add paymethod first")
     })
@@ -106,8 +106,7 @@ const CheckOut = () => {
     // console.log("my current values", );
     useEffect(() => {
         if (formik.values.investprice < 500 && formik.values.paymethod != "") {
-            console.log("find ok")
-            toast.error('Plase set payment amount first', {
+            toast.error('Plase right payment amount first', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -140,12 +139,8 @@ const CheckOut = () => {
                     </ul>
                 </div>
             </div>
-            <div className="lg:w-[1260px] max-w-full mx-auto">
-                <div className="flex pt-5">
-                    <button className="py-2 px-4 rounded flex ga-3 justify-center items-center text-xl font-semibold bg-gray-200 text-black" onClick={() => navigate(-1)}>
-                        <Icon icon="material-symbols:arrow-back-ios-new-rounded" className="text-2xl" /> <span className="pr-2">Back</span>
-                    </button>
-                </div>
+            <div className="lg:w-[1260px] max-w-full mx-auto py-5 px-3">
+                <span className="underline cursor-pointer" onClick={() => navigate(-1)}>Go Back</span>
                 <div className="lg:flex gap-3 py-5 px-2">
                     <div className="flex-1 bg-gray-100 p-3">
                         <div className="">
@@ -246,7 +241,7 @@ const CheckOut = () => {
                                                 <div className="text-red-600 absolute top-full text-sm">{formik.errors.investprice}</div>
                                             ) : null}
                                         </div>
-                                        <p className="mt-5 text-sm"><b>Note: </b>You can add min £500 and max £50000 for investment</p>
+                                        <p className="mt-5 text-sm"><b>Note: </b>You can add min £500 and max £50,000 for investment</p>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +257,7 @@ const CheckOut = () => {
                                         />
                                         <span className="text-xl font-semibold">Pay Pal</span>
                                     </div>
-                                    {formik.values.paymethod == "paypal" && formik.values.investprice >= 500 ?
+                                    {formik.values.paymethod == "paypal" && formik.values.investprice >= 500 && formik.values.investprice <= 50000 ?
                                         <>
                                             <PayPalScriptProvider options={{
                                                 "client-id": "ARStuUYQbcASxDxdDou3gF_x8UqRIBpdL6zPikbnWxPPI68pQSaXoLkIK0hKOXSN4gHU8HdSH7OuAg6x",
@@ -277,7 +272,7 @@ const CheckOut = () => {
                                     <div className="flex gap-3 items-center py-2">
                                         <input onChange={formik.handleChange} onBlur={formik.handleBlur} type="radio" value="payowner" name="paymethod" /><span className="text-xl font-semibold">Payowner</span>
                                     </div>
-                                    {formik.values.paymethod == "payowner" && formik.values.investprice >= 500 ? <>
+                                    {formik.values.paymethod == "payowner" && formik.values.investprice >= 500  && formik.values.investprice <= 50000 ? <>
                                         <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F2F2F2]">
                                             <img src="/images/payoneer.png" className="w-[100px]" />
                                         </button>

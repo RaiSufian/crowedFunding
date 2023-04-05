@@ -124,7 +124,7 @@ const ProjectDetails = () => {
                                     </li>
                                     <li className="flex py-2 border-b">
                                         <span className="flex-1 font-semibold">Risk Accessment -  </span>
-                                        <span className="flex-1">{details.proj_risk_accessment}</span>
+                                        <span className="flex-1">{details.proj_risk_accessment}&nbsp; &nbsp;<Link to="/risk_statement" className="text-sm">(risk statement)</Link></span>
                                     </li>
                                 </ul>
                                 <p className="pt-3 font-semibold text-gray-500"><strong className="text-black">Note: </strong>* Your capital is at risk and returns are not guaranteed.  Please read the Investment Memorandum before investing.
