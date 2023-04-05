@@ -174,13 +174,13 @@ const ProjectDetails = () => {
                                 <div className="">
                                     <ul className="py-2">
                                         <li className="mt-2 flex gap-2 items-center justify-between">
-                                            <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Total Investment -</h6> <span className="text-md text-blck">£ 5,00,000</span>
+                                            <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Total Investment -</h6> <span className="text-md text-blck">£ {details.proj_investment}</span>
                                         </li>
                                         <li className="mt-2 flex gap-2 items-center justify-between">
-                                            <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Loan Required -</h6> <span className="text-md text-blck">£ 3,50,000</span>
+                                            <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Loan Required -</h6> <span className="text-md text-blck">£ {details.proj_loan}</span>
                                         </li>
                                         <li className="mt-2 flex gap-2 items-center justify-between">
-                                            <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Developers Investment -</h6> <span className="text-md text-blck">£ 1,50,000</span>
+                                            <h6 className="text-xl text-[#ffa500] font-lato flex items-center gap-1"><Icon icon="mdi:shield-star-outline" />Developers Investment -</h6> <span className="text-md text-blck">£ {details.proj_developer_investment}</span>
                                         </li>
                                     </ul>
                                 </div>
