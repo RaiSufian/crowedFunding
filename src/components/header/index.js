@@ -31,7 +31,7 @@ const Header = () => {
                                     <div className="py-1" role="none">
 
                                         <Link to="/projects/active" className="text-gray-700 block px-4 py-2 text-sm font-bold hover:bg-gray-100" >Active Projects</Link>
-                                        <Link to="/projects/old" className="text-gray-700 block px-4 py-2 text-sm font-bold hover:bg-gray-100" >Old Projects</Link>
+                                        <Link to="/projects/old" className="text-gray-700 block px-4 py-2 text-sm font-bold hover:bg-gray-100" >Past Projects</Link>
                                     </div>
 
                                 </div>

@@ -12,6 +12,7 @@ const ProjectDetails = () => {
 
     const [details, setDetails] = useState({});
     const [detailImg, setDetailsImg] = useState([]);
+    const [able, setable] = useState(true);
     const dispatch = useDispatch();
     const { id } = useParams();
 
@@ -56,7 +57,14 @@ const ProjectDetails = () => {
     useEffect(() => {
         dispatch(startload());
         getProjectDetails();
+
     }, [])
+    useEffect(() => {
+        // console.log("project status is", details.proj_status);
+        if (details.proj_status == 1) {
+            setable(false);
+        }
+    }, [details])
     return (
         <>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
@@ -196,7 +204,7 @@ const ProjectDetails = () => {
                                     </div>
                                     <div className="mt-2">
                                         <Link to="/StartFunding">
-                                            <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm">
+                                            <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm" disabled={able}>
                                                 Invest Now
                                             </button>
                                         </Link>
