@@ -20,7 +20,7 @@ const Agreement = () => {
             </div>
             <div>
                 <div className="lg:w-[1240px] max-w-full mx-auto lg:py-10 md:py-8 py-4 px-3">
-                    <span className="underline cursor-pointer" onClick={() => navigate(-1)}>Go Back</span>
+                    {/* <span className="underline cursor-pointer" onClick={() => navigate(-1)}>Go Back</span> */}
                     <h2 className="md:py-5 py-2 lg:text-[40px] md:text-[30px] text-[28px] font-bold text-center text-[#151D29FF]">
                         Agreement
                     </h2>
@@ -29,6 +29,24 @@ const Agreement = () => {
                     <div className="xl:px-40 lg:px-10 md:px-3 px-2">
                         <ul className="list-disc text-xl text-justify">
 
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus tortor a felis dignissim lobortis. Aliquam aliquet eros non lacinia viverra. Integer non varius nisi. Suspendisse cursus finibus dapibus. Pellentesque laoreet venenatis posuere. Nulla placerat quis lacus eu pulvinar. Nullam tincidunt arcu ac porttitor auctor.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus tortor a felis dignissim lobortis. Aliquam aliquet eros non lacinia viverra. Integer non varius nisi. Suspendisse cursus finibus dapibus. Pellentesque laoreet venenatis posuere. Nulla placerat quis lacus eu pulvinar. Nullam tincidunt arcu ac porttitor auctor.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus tortor a felis dignissim lobortis. Aliquam aliquet eros non lacinia viverra. Integer non varius nisi. Suspendisse cursus finibus dapibus. Pellentesque laoreet venenatis posuere. Nulla placerat quis lacus eu pulvinar. Nullam tincidunt arcu ac porttitor auctor.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus tortor a felis dignissim lobortis. Aliquam aliquet eros non lacinia viverra. Integer non varius nisi. Suspendisse cursus finibus dapibus. Pellentesque laoreet venenatis posuere. Nulla placerat quis lacus eu pulvinar. Nullam tincidunt arcu ac porttitor auctor.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus tortor a felis dignissim lobortis. Aliquam aliquet eros non lacinia viverra. Integer non varius nisi. Suspendisse cursus finibus dapibus. Pellentesque laoreet venenatis posuere. Nulla placerat quis lacus eu pulvinar. Nullam tincidunt arcu ac porttitor auctor.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus tortor a felis dignissim lobortis. Aliquam aliquet eros non lacinia viverra. Integer non varius nisi. Suspendisse cursus finibus dapibus. Pellentesque laoreet venenatis posuere. Nulla placerat quis lacus eu pulvinar. Nullam tincidunt arcu ac porttitor auctor.
+                            </li>
 
                         </ul>
                     </div>

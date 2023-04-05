@@ -20,7 +20,7 @@ const Disclaimer = () => {
             </div>
             <div>
                 <div className="lg:w-[1240px] max-w-full mx-auto lg:py-10 md:py-8 py-4 px-3">
-                    <span className="underline cursor-pointer" onClick={() => navigate(-1)}>Go Back</span>
+                    {/* <span className="underline cursor-pointer" onClick={() => navigate(-1)}>Go Back</span> */}
                     <h2 className="md:py-5 py-2 lg:text-[40px] md:text-[30px] text-[28px] font-bold text-center text-[#151D29FF]">
                         Disclaimer
                     </h2>

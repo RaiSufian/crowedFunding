@@ -66,7 +66,8 @@ const ProjectSlider = ({ aboutPage }) => {
     };
     return (
         <div className="mx-auto  px-4 py-6 pt-0">
-            <h2 className="px-3 md:text-3xl text-2xl md:py-5 py-2 font-bold">{aboutPage}</h2>
+            <h2 className="lg:text-[40px] md:text-[32px] text-[22px] font-bold md:leading-loose py-4 text-[#151D29FF] text-center">{aboutPage}</h2>
+            <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
             <div className="mx-auto xl:w-[1100px] w-full" >
                 <Slider {...settings}>
                     {project.map((items, index) => {

@@ -97,7 +97,7 @@ const StartFunding = () => {
         email: Yup.string().required("This field is required")
             .email("Please enter email address"),
         confirmEmail: Yup.string().oneOf([Yup.ref('email'), null], "Does not match with field1!")
-            .required('This field is required'),
+            .required('Confirm email is not match with email'),
         name: Yup.string().required("This field is required"),
         phone: Yup.string().required("This field is required"),
         DOB: Yup.string().required("This field is required"),
@@ -181,7 +181,7 @@ const StartFunding = () => {
             <div className="">
 
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative py-10">
-                    <span className="underline cursor-pointer" onClick={() => navigate(-1)}>Go Back</span>
+                    <span className="underline cursor-pointer px-2" onClick={() => navigate(-1)}>Go Back</span>
                     <h2 className="lg:text-[40px] md:text-[30px] text-[28px] font-bold py-6 text-[#151D29FF] text-center pb-5 ">Enter Your Personal Infomation</h2>
                     <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto mb-10"></div>
                     <div className="bg-gray-100 px-5 font-mont">
@@ -298,19 +298,19 @@ const StartFunding = () => {
                                 ) : null}
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-4 ">
-                                <input type="checkbox" value={formik.values.TerCon} onChange={formik.handleChange} onBlur={formik.handleBlur} name="TerCon" checked={formik.values.TerCon ? "true" : ""} /> <Link to="/terms_&_conditions"><span className="text-sm">Terms & Conditions</span></Link>
+                                <input type="checkbox" value={formik.values.TerCon} onChange={formik.handleChange} onBlur={formik.handleBlur} name="TerCon" checked={formik.values.TerCon ? "true" : ""} /><Link to="/terms_&_conditions" target="_blank"><span className="text-sm">Terms & Conditions</span></Link>
                                 {formik.touched.TerCon && formik.errors.TerCon ? (
                                     <span className="text-red-500  text-sm">{formik.errors.TerCon}</span>
                                 ) : null}
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-2">
-                                <input type="checkbox" value={formik.values.disc} onChange={formik.handleChange} onBlur={formik.handleBlur} name="disc" checked={formik.values.disc ? "true" : ""} /> You need to check <Link className="text-sm" to="/disclaimer" >Disclaimer</Link>
+                                <input type="checkbox" value={formik.values.disc} onChange={formik.handleChange} onBlur={formik.handleBlur} name="disc" checked={formik.values.disc ? "true" : ""} /> <Link className="text-sm" to="/disclaimer" target="_blank">Disclaimer</Link>
                                 {formik.touched.disc && formik.errors.disc ? (
                                     <span className="text-red-500  text-sm">{formik.errors.disc}</span>
                                 ) : null}
                             </div>
                             <div className="pt-4 w-full px-2 flex items-center gap-2">
-                                <input type="checkbox" value={formik.values.agree} onChange={formik.handleChange} onBlur={formik.handleBlur} name="agree" checked={formik.values.agree ? "true" : ""} /> Check  <Link className="text-sm " to="/view_agreement" >agreement </Link>
+                                <input type="checkbox" value={formik.values.agree} onChange={formik.handleChange} onBlur={formik.handleBlur} name="agree" checked={formik.values.agree ? "true" : ""} /> <Link className="text-sm " to="/view_agreement" target="_blank">agreement </Link>
                                 {formik.touched.agree && formik.errors.agree ? (
                                     <span className="text-red-500  text-sm">{formik.errors.agree}</span>
                                 ) : null}

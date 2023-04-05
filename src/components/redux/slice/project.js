@@ -12,7 +12,7 @@ export const activeproject = createSlice({
             state.project = action.payload;
         },
         removeProject: (state, action) => {
-            state.project = {}
+            state.project = null;
         }
     },
 })

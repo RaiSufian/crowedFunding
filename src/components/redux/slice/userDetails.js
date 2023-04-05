@@ -13,7 +13,7 @@ export const userDetail = createSlice({
             state.user = action.payload;
         },
         removeDetails: (state, action) => {
-            state.user = {}
+            state.user = null;
         }
     },
 })
