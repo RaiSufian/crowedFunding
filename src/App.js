@@ -39,8 +39,8 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/StartFunding" element={<StartFunding />} />
         <Route path="/project/:id" element={<ProjectDetails />} />
-        <Route path="/projects/active" element={<ActiveProject />} />
-        <Route path="/projects/old" element={<OldProject />} />
+        <Route path="/projects/active_items" element={<ActiveProject />} />
+        <Route path="/projects/past_items" element={<OldProject />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/privacy_policy" element={<PrivacyPolicy />} />
         <Route path="/terms_&_conditions" element={<TermsConditions />} />

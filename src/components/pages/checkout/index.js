@@ -100,7 +100,7 @@ const CheckOut = () => {
 
         }
         console.log("my params is", params);
-        axios.post(`/index.php?action=add_investment&confirm_user_name=${userDetails.email}&proj_id=${project.proj_id}&pi_referance_code=${formik.values.payID}&pi_payment=${orderpay}&pi_type=${formik.values.paymethod}&pi_status=1&user_fname=${userDetails.name}&user_phone=${userDetails.phone}&user_dob=${userDetails.DOB}&user_house_no=${userDetails.houseNo}&user_address=${userDetails.address}&user_street=${userDetails.streetNo}&user_town=${userDetails.townName}&countrie=${userDetails.country}&user_state=${userDetails.state}&user_city=${userDetails.city}`).then((resp) => {
+        axios.post(`/index.php?action=add_investment&confirm_user_name=${userDetails.email}&proj_id=${project.proj_id}&pi_referance_code=${formik.values.payID}&pi_payment=${orderpay}&pi_type=${formik.values.paymethod}&pi_status=1&user_fname=${userDetails.name}&user_phone=${userDetails.phone}&user_dob=${userDetails.DOB}&user_house_no=${userDetails.houseNo}&user_address=${userDetails.address}&user_street=${userDetails.streetNo}&user_town=${userDetails.townName}&user_countrie=${userDetails.country}&user_state=${userDetails.state}&user_city=${userDetails.city}`).then((resp) => {
             console.log("add payment result", resp)
             if (resp.status == "200") {
                 dispatch(removeProject());

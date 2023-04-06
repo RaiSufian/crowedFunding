@@ -169,8 +169,6 @@ const ProjectDetails = () => {
 
                             </div>
                             <div className="border rounded-sm border-gray-200 p-3 mt-4">
-
-
                                 <div className="">
                                     <ul className="py-2">
                                         <li className="mt-2 flex gap-2 items-center justify-between">
