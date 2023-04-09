@@ -5,9 +5,11 @@ import ProjectCard from '../../cards/projectCard';
 import axios from "axios";
 import { useDispatch } from 'react-redux';
 import { endload, startload } from '../../redux/slice/loader';
+
 const ProjectSlider = ({ aboutPage }) => {
     const dispatch = useDispatch();
     const [project, setProjects] = useState([]);
+    
     const getProjects = async () => {
         try {
             await axios.get("/index.php?action=get_projects&proj_featured=1").then((resp) => {
@@ -28,7 +30,11 @@ const ProjectSlider = ({ aboutPage }) => {
     useEffect(() => {
         dispatch(startload());
         getProjects();
+
     }, [])
+
+ 
+   
     var settings = {
         loop: true,
         dots: true,

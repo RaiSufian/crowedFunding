@@ -6,7 +6,8 @@ import { endload, startload } from '../../redux/slice/loader';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addProject } from '../../redux/slice/project'
+import { addProject } from '../../redux/slice/project';
+import moment from 'moment';
 import axios from "axios";
 const ProjectDetails = () => {
 
@@ -14,6 +15,8 @@ const ProjectDetails = () => {
     const [detailImg, setDetailsImg] = useState([]);
     const [able, setable] = useState(true);
     const dispatch = useDispatch();
+    const [dateLeft, setdateLeft] = useState("");
+    const [intper, serintper] = useState("")
     const { id } = useParams();
 
     const settings = {
@@ -64,7 +67,20 @@ const ProjectDetails = () => {
         if (details.proj_status == 1) {
             setable(false);
         }
-    }, [details])
+    }, [details]);
+    useEffect(() => {
+        const startdate = moment(details?.proj_enddate).format('YYYY-MM-DD');
+        const currentDate = moment();
+
+        const days = currentDate.diff(startdate, 'days')
+
+        setdateLeft(days);
+        const intPer = Math.floor(details.total_investment / details.proj_investment * 100);
+        serintper(intPer + "%");
+    }, [details]);
+
+
+
     return (
         <>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
@@ -185,24 +201,24 @@ const ProjectDetails = () => {
                                 <hr className="shadow-lg my-3" />
                                 <div className="py-3">
                                     <div className="overInvester flex items-center justify-between text-xl font-semibold font-lato " >
-                                        <span>£5,000</span>
+                                        <span>£{details.total_investment}</span>
                                         <span>{details.total_investor}</span>
                                     </div>
                                     <div className="flex items-center justify-between text-[10px] py-2">
-                                        <span>of £250k</span>
+                                        <span>of £{details.proj_investment}</span>
                                         <span>Current Investors
                                         </span>
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
-                                        <div className="bg-[#ffa500] h-1.5 rounded-full dark:bg-blue-500 w-[25%]"></div>
+                                        <div className={`bg-[#ffa500] h-1.5 rounded-full dark:bg-blue-500 w-[${intper}]`}></div>
                                     </div>
                                     <div className="flex items-center justify-between text-[10px] py-2">
-                                        <span><strong>2.00%</strong> Funded</span>
-                                        <span><strong>46</strong> days left to fund</span>
+                                        <span><strong>{intper}</strong> Funded</span>
+                                        <span><strong>{dateLeft * -1}</strong> days left to fund</span>
                                     </div>
                                     <div className="mt-2">
                                         <Link to="/StartFunding">
-                                            <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm" disabled={able}>
+                                            <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm hover:tracking-widest transition-all duration-100" disabled={able}>
                                                 Invest Now
                                             </button>
                                         </Link>

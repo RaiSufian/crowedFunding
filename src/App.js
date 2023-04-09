@@ -11,7 +11,6 @@ import StartFunding from "./components/pages/FundingStart";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import FAQs from "./components/pages/faqs";
-import Payment from './components/pages/faqs';
 import PrivacyPolicy from "./components/pages/privacyPolicy";
 import CheckOut from './components/pages/checkout';
 import OldProject from "./components/pages/oldProjects";

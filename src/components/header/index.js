@@ -28,8 +28,8 @@ const Header = () => {
                             <li className="mx-2 px-4"><Link to="/aboutus" className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white" onClick={() => setDropmenu(false)}>About Us</Link></li>
                             <li className="mx-2 px-4 relative inline-block cursor-pointer group" onClick={() => setDropmenu(!dropmenu)}>
                                 <span className="py-1 text-sm font-bold border-b border-gray-900 hover:border-white flex items-center">Projects <Icon icon="gridicons:dropdown"  className="text-xl"/></span>
-                                <div className={`${dropmenu ? "" : "hidden"} absolute left-1/2 z-20 mt-1 w-48 -translate-x-1/2 top-10 divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none `} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                                    <div className="py-1 relative after:absolute after:w-4 after:h-4 after:content-[''] after:bg-white after:top-0 after:left-1/2 after:-top-2 after:rotate-45 after:-translate-x-1/2 after:z-0 z-0" role="none">
+                                <div className={`${dropmenu ? "" : "hidden"} absolute left-1/2 z-20 mt-1 w-48 -translate-x-1/2 top-10 divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                                    <div className="py-1 relative after:absolute after:w-3 after:h-3 after:content-[''] after:bg-white after:-top-[2px] after:left-1/2 after:-top-2 after:rotate-45 after:-translate-x-1/2 after:z-0" role="none">
                                         <Link to="/projects/active_items" className="text-gray-700 block px-4 py-2 text-sm font-bold hover:bg-gray-100" >Active Projects</Link>
                                         <Link to="/projects/past_items" className="text-gray-700 block px-4 py-2 text-sm font-bold hover:bg-gray-100" >Past Projects</Link>
                                     </div>
