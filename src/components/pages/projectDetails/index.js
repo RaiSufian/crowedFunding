@@ -61,9 +61,9 @@ const ProjectDetails = () => {
         dispatch(startload());
         getProjectDetails();
 
-    }, [])
+    }, [id])
     useEffect(() => {
-        // console.log("project status is", details.proj_status);
+        console.log("project status is", details?.proj_status);
         if (details.proj_status == 1) {
             setable(false);
         }
@@ -71,10 +71,8 @@ const ProjectDetails = () => {
     useEffect(() => {
         const startdate = moment(details?.proj_enddate).format('YYYY-MM-DD');
         const currentDate = moment();
-
         const days = currentDate.diff(startdate, 'days')
-
-        setdateLeft(days);
+        setdateLeft(days * -1);
         const intPer = Math.floor(details.total_investment / details.proj_investment * 100);
         serintper(intPer + "%");
     }, [details]);
@@ -210,18 +208,22 @@ const ProjectDetails = () => {
                                         </span>
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
-                                        <div className={`bg-[#ffa500] h-1.5 rounded-full dark:bg-blue-500 w-[${intper}]`}></div>
+                                        <div className={`bg-[#ffa500] h-1.5 rounded-full dark:bg-blue-500 `} style={{ width: `${intper}` }}></div>
                                     </div>
                                     <div className="flex items-center justify-between text-[10px] py-2">
                                         <span><strong>{intper}</strong> Funded</span>
-                                        <span><strong>{dateLeft * -1}</strong> days left to fund</span>
+                                        {dateLeft > 0 ? <span><strong>{dateLeft}</strong> days left to fund</span> : <span>Funds End</span>}
+
                                     </div>
                                     <div className="mt-2">
-                                        <Link to="/StartFunding">
-                                            <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm hover:tracking-widest transition-all duration-100" disabled={able}>
+                                        {able ? <button className="w-full py-3 bg-[#F5F5F5] text-black uppercase font-semibold shadow-md rounded-sm hover:tracking-widest transition-all duration-100" disabled>
+                                            Invest End
+                                        </button> : <Link to="/StartFunding">
+                                            <button className="w-full py-3 bg-[#ffa500] text-white uppercase font-semibold shadow-md rounded-sm hover:tracking-widest transition-all duration-100" >
                                                 Invest Now
                                             </button>
-                                        </Link>
+                                        </Link>}
+
 
                                         <div className="p-1 w-36 h-36 mx-auto rounded-full overflow-hidden mt-5">
                                             <img src="/images/darkLogo.jpg" className="h-full w-full rounded-full  shadow-md " />

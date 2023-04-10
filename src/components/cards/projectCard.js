@@ -6,6 +6,7 @@ const ProjectCard = ({ value }) => {
 
     const days = currentDate.diff(startdate, 'days')
 
+    const leftdays = days * -1;
 
     const intPer = Math.floor(value.total_investment / value.proj_investment * 100);
     console.log("investement percentage", intPer);
@@ -22,9 +23,10 @@ const ProjectCard = ({ value }) => {
                     <p className="px-3 text-sm textOverflow">{value.pro_short_description} </p>
                 </div>
                 <div className="px-2">
-                    <p className="font-bold text-center  m-1 pb-1">{days * -1} days to go - 100.00%</p>
+                    {leftdays > 0 ? <p className="font-bold text-center  m-1 pb-1">{leftdays} days to go - 100.00%</p> : <p className="font-bold text-center  m-1 pb-1">End - 100.00%</p>}
+
                     <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700 mb-3">
-                        <div className={`bg-[#ffa500] h-1.5 rounded-full w-[${intPer}%]`}></div>
+                        <div className={`bg-[#ffa500] h-1.5 rounded-full `} style={{ width: `${intPer}%` }}></div>
                     </div>
                     <div className=" py-3 px-2">
                         <ul className="flex justify-around text-center">

@@ -33,6 +33,65 @@ const StartFunding = () => {
         amount: ""
     };
     // ==================================================
+    //  Our Current countries
+    // ==================================================
+    const ourcountry = [
+        {
+            name: "ThaiLand",
+            id: "Thailand"
+        },
+        {
+            name: "Nepal",
+            id: "Nepal"
+        },
+        {
+            name: "Vietnam",
+            id: "Vietnam"
+        },
+        {
+            name: "Sri Lanka",
+            id: "Sri Lanka"
+        },
+        {
+            name: "India",
+            id: "India"
+        },
+        {
+            name: "Bangladesh",
+            id: "Bangladesh"
+        },
+        {
+            name: "Pakistan",
+            id: "Pakistan"
+        },
+        {
+            name: "Indonesia",
+            id: "Indonesia"
+        },
+        {
+            name: "Malaysia",
+            id: "Malaysia"
+        },
+        {
+            name: "Philippines",
+            id: "Philippines"
+        },
+        {
+            name: "South Korea",
+            id: "Korea South"
+        },
+        {
+            name: "Uzbekistan",
+            id: "Uzbekistan"
+        },
+        {
+            name: "Taiwan",
+            id: "Taiwan"
+        },
+
+    ]
+
+    // ==================================================
     // get Token for country API
     // ==================================================
 
@@ -150,6 +209,7 @@ const StartFunding = () => {
 
     }, [Unitoken])
     useEffect(() => {
+        console.log("my current country is", formik.values.country)
         if (formik.values.country) {
             getState();
         }
@@ -254,10 +314,10 @@ const StartFunding = () => {
                                 <label>Country<span className="text-red-500 text-xl">*</span></label>
                                 <select id="countries" value={formik.values.country} onChange={formik.handleChange} onBlur={formik.handleBlur} name="country" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                     <option value="" selected>Choose a country</option>
-                                    {country.map((value, index) => {
+                                    {ourcountry.map((value, index) => {
                                         return (
                                             <>
-                                                <option value={value.country_name} key={value.country_short_name}>{value.country_name}</option>
+                                                <option value={value.id} key={value.id}>{value.name}</option>
                                             </>
                                         )
                                     })}
