@@ -155,14 +155,14 @@ const CheckOut = () => {
                     </ul>
                 </div>
             </div>
-            <div className="lg:w-[1260px] max-w-full mx-auto py-5 px-3">
+            <div className="lg:w-[1260px] max-w-full mx-auto py-5 md:px-3">
                 <span className="underline cursor-pointer" onClick={() => navigate(-1)}>Go Back</span>
-                <div className="lg:flex gap-3 py-5 px-2">
+                <div className="lg:flex gap-3 py-5 md:px-2">
                     <div className="flex-1 bg-gray-100 p-3">
                         <div className="">
                             <div className="">
                                 <h3 className="text-gray-700 text-2xl py-3 font-semibold ">Project Info</h3>
-                                <div className="md:flex p-5 bg-gray-100 gap-3 rounded">
+                                <div className="md:flex md:p-5 p-2 bg-gray-100 gap-3 rounded">
                                     <div className="flex-1">
                                         <img src={project?.proj_logo} alt="primary img" className="w-full rounded" />
                                     </div>
@@ -240,7 +240,7 @@ const CheckOut = () => {
 
                         </div>
                     </div>
-                    <div className="lg:w-1/3 md:w-1/2 ld:pt-0 pt-5">
+                    <div className="lg:w-1/3 md:w-1/2 lg:pt-0 pt-5 p-1">
                         <form onSubmit={formik.handleSubmit}>
                             <div>
                                 <h3 className="text-gray-700 text-2xl pb-3 font-semibold ">Add Amount</h3>

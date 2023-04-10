@@ -37,7 +37,7 @@ const ProjectSlider = ({ aboutPage }) => {
    
     var settings = {
         loop: true,
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 3,
