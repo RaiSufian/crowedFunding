@@ -36,7 +36,7 @@ const ProjectCard = ({ value }) => {
                             </li>
                             <li>
                                 <p className="font-xl font-bold">£{value.total_investment}</p>
-                                <span>Pledged</span>
+                                <span>Loan</span>
                             </li>
                             <li>
                                 <p className="font-xl font-bold">{value.total_investor}</p>

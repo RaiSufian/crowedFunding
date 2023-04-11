@@ -7,16 +7,16 @@ const Footer = () => {
                 <div className="md:flex px-[6.3vw] py-3 items-center justify-between">
                     <div className="footer_menu">
                         <div className="main_menu">
-                            <ul class="flex flex-row flex-wrap items-center py-6 py-3">
-                                <li class="mx-2"><Link to="/" className="py-3 px-3 text-sm  font-mont">Home</Link></li>
-                                <li class="mx-2"><Link to="/aboutus" className="py-3 px-3 text-sm ">About Us</Link></li>
-                                <li class="mx-2"><Link to="/contactus" className="py-3 px-3 text-sm ">Contact</Link></li>
-                                <li class="mx-2"><Link to="/privacy_policy" className="py-3 px-3 text-sm ">Privacy Policy</Link></li>
+                            <ul class="flex flex-row flex-wrap items-center md:py-6 py-3 py-3 justify-center md:jsutify-start">
+                                <li class="mx-2"><Link to="/" className="py-3 lg:px-3 px-1 text-sm  font-mont">Home</Link></li>
+                                <li class="mx-2"><Link to="/aboutus" className="py-3 lg:px-3 px-1 text-sm ">About Us</Link></li>
+                                <li class="mx-2"><Link to="/contactus" className="py-3 lg:px-3 px-1 text-sm ">Contact</Link></li>
+                                <li class="mx-2"><Link to="/privacy_policy" className="py-3 lg:px-3 px-1 text-sm ">Privacy Policy</Link></li>
                             </ul>
                         </div>
                     </div>
                     <div className="footer_social">
-                        <ul className="flex flex-row items-center">
+                        <ul className="flex flex-row items-center justify-center md:jsutify-end">
                             <li class="mx-4">
                                 <a href="google.com" className="text-lg px-3"><Icon icon="ri:facebook-fill" /></a>
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Importance = () => {
     return (
         <section className="section_importance lg:py-16 md:py-8">
@@ -30,7 +31,9 @@ const Importance = () => {
                             </div>
                         </div>
                         <div className="lg:w-[25%] md:w-[20%] w-full text-end p-4">
-                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
+                            <Link to="/projects/active_items">
+                                <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -59,8 +62,9 @@ const Importance = () => {
                             </div>
                         </div>
                         <div className="lg:w-[25%] md:w-[20%] w-full text-end p-4">
-                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
-                        </div>
+                            <Link to="/projects/active_items">
+                                <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
+                            </Link>                        </div>
                     </div>
                 </div>
                 {/* What*/}
@@ -89,8 +93,9 @@ const Importance = () => {
                             </div>
                         </div>
                         <div className="lg:w-[25%] md:w-[20%] w-full text-end p-4">
-                            <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
-                        </div>
+                            <Link to="/projects/active_items">
+                                <button className="bg-[#7230b0] text-white px-11 py-3 rounded-full font-bold font-lato hover:bg-black hover:text-white">Invest</button>
+                            </Link>                        </div>
                     </div>
                 </div>
 
