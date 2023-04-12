@@ -9,6 +9,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 import { removeProject } from '../../redux/slice/project';
 import { removeDetails } from '../../redux/slice/userDetails';
+import { Helmet } from 'react-helmet';
 const CheckOut = () => {
     const project = useSelector((state) => state.activeproject.project);
     const userDetails = useSelector((state) => state.userDetails.user);
@@ -134,24 +135,27 @@ const CheckOut = () => {
         }
 
     }, [formik.values.paymethod])
-        // ========================================
-        // block pay
-        // ========================================
-        const Blockpay  = () =>{
-            toast.error('Payoneer is not active', {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
-        }
+    // ========================================
+    // block pay
+    // ========================================
+    const Blockpay = () => {
+        toast.error('Payoneer is not active', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
 
     return (
         <>
+            < Helmet >
+                <title>Check Out page | The Future of Property Investment</title>
+            </Helmet>
             <ToastContainer />
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">

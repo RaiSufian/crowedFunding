@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { addProject } from '../../redux/slice/project';
 import moment from 'moment';
 import axios from "axios";
+import { Helmet } from 'react-helmet';
 const ProjectDetails = () => {
 
     const [details, setDetails] = useState({});
@@ -81,6 +82,10 @@ const ProjectDetails = () => {
 
     return (
         <>
+            < Helmet >
+                <title>{details.proj_name}</title>
+                <meta name="description" content={details.pro_short_description} />
+            </Helmet>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
                     <h1 className="lg:text-4xl md:text-2xl text-lg px-2">Project Investment Information

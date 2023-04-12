@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useSelector, useDispatch } from 'react-redux';
 import { addDetails, removeDetails } from '../../redux/slice/userDetails';
+import { Helmet } from 'react-helmet';
 const StartFunding = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
@@ -222,6 +223,9 @@ const StartFunding = () => {
 
     return (
         <>
+            < Helmet >
+                <title>start property investment | The Future of Property Investment</title>
+            </Helmet>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
                     <h1 className=" lg:text-4xl md:text-2xl text-lg px-2">Start Investing

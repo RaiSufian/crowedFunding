@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 const PrivacyPolicy = () => {
     return (
         <>
+            < Helmet >
+            <title>Privacy Policy of investment | The Future of Property Investment</title>
+            </Helmet>
             <div className="contact_bread_crumb lg:py-8 lg:py-6 py-4 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
                     <h1 className="lg:text-4xl md:text-2xl text-2xl px-2">Privacy Policy</h1>
@@ -188,7 +192,7 @@ const PrivacyPolicy = () => {
                         <h3 className="text-2xl py-2 font-bold">11. Changes to this Privacy Policy
                         </h3>
                         <p className="px-5 ">This Privacy Policy was last updated on 17 January 2019
-<br/>
+                            <br />
                             This Privacy Policy may be updated from time to time so you may wish to check it each time you provide personal data to us. We won’t alert you to minor changes, but if there are any major changes, we will let you know and where appropriate ask for your consent.
 
                         </p>

@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import thankYou from '../../json/thankyou2.json';
+import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 const ThankYou = () => {
     const defaultOptions = {
@@ -11,6 +12,9 @@ const ThankYou = () => {
     };
     return (
         <>
+          < Helmet >
+            <title>Thank you for investment | The Future of Property Investment</title>
+            </Helmet>
 
             <div className=" flex items-center justify-center overflow-hidden py-20">
                 <div className="text-center font-semibold">

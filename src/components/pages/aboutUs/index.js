@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 const AboutUs = () => {
     return (
         <>
+        < Helmet >
+        <title>About vcrowdfund | The Future of Property Investment</title>
+        </Helmet>
             <div className="contact_bread_crumb lg:py-8 lg:py-6 py-4 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
                     <h1 className=" lg:text-4xl md:text-2xl text-2xl px-2">About Us</h1>
