@@ -46,9 +46,12 @@ const ProjectCard = ({ value }) => {
                     </div>
 
                 </div>
-                <Link to={`/project/${value.proj_id}`}>
+                {leftdays > 0 ? <Link to={`/project/${value.proj_id}`}>
                     <button className="uppercase text-center w-full py-3 bg-[#ffa500] text-white  font-semibold tracking-widest hover:tracking-wider transition-all duration-200">Participate Now</button>
-                </Link >
+                </Link > : <Link to={`/project/${value.proj_id}`}>
+                    <button className="uppercase text-center w-full py-3 bg-[#F5F5F5] text-black  font-semibold tracking-widest hover:tracking-wider transition-all duration-200">Invest End</button>
+                </Link >}
+                
 
             </div>
 

@@ -9,7 +9,8 @@ const Home = () => {
             <Importance />
             <Message />
             <InvestGuide />
-            <ProjectSlider aboutPage={"Investment Opportunities"} />
+            <ProjectSlider aboutPage={"Active Investment Opportunities"} status={1}/>
+            <ProjectSlider aboutPage={"Past Investment Opportunities"} status={0}/>
         </>
     )
 }

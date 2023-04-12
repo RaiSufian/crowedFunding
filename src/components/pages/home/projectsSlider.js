@@ -6,13 +6,13 @@ import axios from "axios";
 import { useDispatch } from 'react-redux';
 import { endload, startload } from '../../redux/slice/loader';
 
-const ProjectSlider = ({ aboutPage }) => {
+const ProjectSlider = ({ aboutPage,status }) => {
     const dispatch = useDispatch();
     const [project, setProjects] = useState([]);
     
     const getProjects = async () => {
         try {
-            await axios.get("/index.php?action=get_projects&proj_featured=1").then((resp) => {
+            await axios.get(`/index.php?action=get_projects&proj_status=${status}`).then((resp) => {
                 console.log("get project list", resp.data.data);
                 if (resp.status == "200") {
                     setProjects(resp.data.data);
@@ -71,7 +71,7 @@ const ProjectSlider = ({ aboutPage }) => {
         ]
     };
     return (
-        <div className="mx-auto  px-4 py-6 pt-0">
+        <div className="mx-auto  px-4 py-6 pt-0 font-mont">
             <h2 className="lg:text-[40px] md:text-[32px] text-[22px] font-bold md:leading-loose py-4 text-[#151D29FF] text-center">{aboutPage}</h2>
             <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
             <div className="mx-auto xl:w-[1100px] w-full" >

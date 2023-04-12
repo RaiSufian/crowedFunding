@@ -134,7 +134,21 @@ const CheckOut = () => {
         }
 
     }, [formik.values.paymethod])
-
+        // ========================================
+        // block pay
+        // ========================================
+        const Blockpay  = () =>{
+            toast.error('Payoneer is not active', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
 
     return (
         <>
@@ -289,7 +303,7 @@ const CheckOut = () => {
                                         <input onChange={formik.handleChange} onBlur={formik.handleBlur} type="radio" value="payowner" name="paymethod" /><span className="text-xl font-semibold">Payowner</span>
                                     </div>
                                     {formik.values.paymethod == "payowner" && formik.values.investprice >= 500 && formik.values.investprice <= 50000 ? <>
-                                        <button className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F2F2F2]">
+                                        <button type="button" className="my-2 py-3 border rounded-md w-full flex justify-center bg-[#F2F2F2]" onClick={Blockpay}>
                                             <img src="/images/payoneer.png" className="w-[100px]" />
                                         </button>
                                     </> : null}
