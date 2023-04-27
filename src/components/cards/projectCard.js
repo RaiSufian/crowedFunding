@@ -9,7 +9,7 @@ const ProjectCard = ({ value }) => {
     const leftdays = days * -1;
 
     const intPer = Math.floor(value.total_investment / value.proj_investment * 100);
-    console.log("investement percentage", intPer);
+    // console.log("investement percentage", intPer);
     return (
 
         <div className="w-full px-2 mt-5">
@@ -28,7 +28,7 @@ const ProjectCard = ({ value }) => {
                     <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700 mb-3">
                         <div className={`bg-[#ffa500] h-1.5 rounded-full `} style={{ width: `${intPer}%` }}></div>
                     </div>
-                    <div className=" py-3 px-2">
+                    <div className=" py-3 px-2 main_menu">
                         <ul className="flex justify-around text-center">
                             <li>
                                 <p className="font-xl font-bold">£{value.proj_loan}</p>
@@ -51,7 +51,7 @@ const ProjectCard = ({ value }) => {
                 </Link > : <Link to={`/project/${value.proj_id}`}>
                     <button className="uppercase text-center w-full py-3 bg-[#F5F5F5] text-black  font-semibold tracking-widest hover:tracking-wider transition-all duration-200">Invest End</button>
                 </Link >}
-                
+
 
             </div>
 

@@ -28,8 +28,8 @@ module.exports = {
     fontFamily: {
       'mont': ['Montserrat', 'sans-serif'],
       'lato': ['Lato', 'sans-serif'],
+      'title': ['Bruno Ace', 'cursive'],
     },
-
   },
   plugins: [require("tw-elements/dist/plugin")]
 }

@@ -13,7 +13,7 @@ const ProjectSlider = ({ aboutPage,status }) => {
     const getProjects = async () => {
         try {
             await axios.get(`/index.php?action=get_projects&proj_status=${status}`).then((resp) => {
-                console.log("get project list", resp.data.data);
+                // console.log("get project list", resp.data.data);
                 if (resp.status == "200") {
                     setProjects(resp.data.data);
                     dispatch(endload());

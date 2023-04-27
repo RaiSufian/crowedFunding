@@ -45,7 +45,7 @@ const ProjectDetails = () => {
             await axios.get(`/index.php?action=get_projects&proj_id=${id}`).then((resp) => {
 
                 if (resp.status == "200") {
-                    console.log("get project details data is 1", resp.status);
+                    // console.log("get project details data is 1", resp.status);
                     setDetails(resp.data.data[0]);
                     dispatch(endload());
                     setDetailsImg(resp.data.data[0].project_gallery);
@@ -64,7 +64,7 @@ const ProjectDetails = () => {
 
     }, [id])
     useEffect(() => {
-        console.log("project status is", details?.proj_status);
+        // console.log("project status is", details?.proj_status);
         if (details.proj_status == 1) {
             setable(false);
         }

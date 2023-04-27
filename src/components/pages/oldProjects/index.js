@@ -11,7 +11,7 @@ const OldProject = () => {
     const getProjects = async () => {
         try {
             await axios.get("/index.php?action=get_projects&proj_status=0").then((resp) => {
-                console.log("get detail project result is", resp.data.data);
+                // console.log("get detail project result is", resp.data.data);
                 if (resp.status == "200") {
                     setProjects(resp.data.data);
                     dispatch(endload());
@@ -31,9 +31,9 @@ const OldProject = () => {
     }, [])
     return (
         <>
-        < Helmet >
-        <title>Past Projects vcrowdfund | The Future of Property Investment</title>
-        </Helmet>
+            < Helmet >
+                <title>Crowd Fund House London | Small Investment in London Property Market</title>
+            </Helmet>
             <div className="contact_bread_crumb lg:py-8 lg:py-6 py-4 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
                     <h1 className=" lg:text-4xl md:text-2xl text-2xl px-2">Projects

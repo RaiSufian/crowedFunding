@@ -12,8 +12,8 @@ const ThankYou = () => {
     };
     return (
         <>
-          < Helmet >
-            <title>Thank you for investment | The Future of Property Investment</title>
+            < Helmet >
+                <title>Thank you for investment  | Small Investment in London Property Market</title>
             </Helmet>
 
             <div className=" flex items-center justify-center overflow-hidden py-20">

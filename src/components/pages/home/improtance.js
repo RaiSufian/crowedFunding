@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-const Importance = () => {
+const Importance = ({ heading, whyInvest, howInvest, whatInvest }) => {
     return (
         <section className="section_importance lg:py-16 md:py-8">
             <div className="lg:w-[1260px] max-w-full mx-auto font-mont">
                 <div className="text-center  px-[10vw] ">
-                    <h2 className="lg:text-[40px] md:text-[30px] text-[22px] font-bold lg:leading-loose leading-relaxed py-4 text-[#151D29FF]">Small Investors Crowd Fund Unsecured Small Loans to Property </h2>
+                    <h2 className="lg:text-[40px] md:text-[30px] text-[22px] font-bold lg:leading-loose leading-relaxed py-4 text-[#151D29FF]">{heading?.wid_heading} </h2>
                 </div>
                 <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
                 {/* why*/}
@@ -25,8 +25,12 @@ const Importance = () => {
                         <div className="md:w-[60%] w-full">
                             <div className="w-full">
                                 <div className="py-2 lg:px-16 px-5  text-[#151d29ff]">
-                                    <h3 className="md:text-3xl text-2xl font-bold leading-relaxed">Why Invest in London</h3>
-                                    <p className="text-lg font-lato ">Real estate properties, in general, carry a lower risk of devaluation. However, to initiate investment in properties, a considerable sum of money is usually required. Investment products tailored to cater to the needs of small-scale investors in London properties are currently limited. London's real estate market is one of the most dynamic in the world, with a high rate of movement owing to its position as a global banking and finance hub, with numerous people relocating in and out of the city.</p>
+                                    <h3 className="md:text-3xl text-2xl font-bold leading-relaxed">{whyInvest?.wid_heading}</h3>
+                                    <p className="text-lg font-lato "><div
+                                        dangerouslySetInnerHTML={{
+                                            __html: whyInvest?.wid_details
+                                        }}
+                                    /></p>
                                 </div>
                             </div>
                         </div>
@@ -56,8 +60,12 @@ const Importance = () => {
                         <div className="md:w-[60%] w-full">
                             <div className="w-full">
                                 <div className="py-2 lg:px-16 md:px-5 px-7   text-[#151d29ff]">
-                                    <h3 className="md:text-3xl text-2xl font-bold leading-relaxed">How Do You Invest</h3>
-                                    <p className="text-lg font-lato">We provide an opportunity for small investors to invest in a London property by offering independent, unsecured loans to a developer with a solid background but who requires assistance in raising funds, resulting in profits for all parties involved. We All Profit Together.</p>
+                                    <h3 className="md:text-3xl text-2xl font-bold leading-relaxed">{howInvest?.wid_heading}</h3>
+                                    <p className="text-lg font-lato"><div
+                                        dangerouslySetInnerHTML={{
+                                            __html: howInvest?.wid_details
+                                        }}
+                                    /></p>
                                 </div>
                             </div>
                         </div>
@@ -87,8 +95,12 @@ const Importance = () => {
                         <div className="md:w-[60%] w-full">
                             <div className="w-full">
                                 <div className="py-2 lg:px-16 md:px-5 px-7  text-[#151d29ff]">
-                                    <h3 className="md:text-3xl text-2xl  font-bold leading-relaxed">What to Invest</h3>
-                                    <p className="text-lg font-lato">The Property Investment as an Investor is as low as £500 per Investor and highest cap is £25000 per investor. Investor to check laws of his land and invest at his own will & risk.</p>
+                                    <h3 className="md:text-3xl text-2xl  font-bold leading-relaxed">{whatInvest?.wid_heading}</h3>
+                                    <p className="text-lg font-lato"> <p className="text-lg font-lato"><div
+                                        dangerouslySetInnerHTML={{
+                                            __html: whatInvest?.wid_details
+                                        }}
+                                    /></p></p>
                                 </div>
                             </div>
                         </div>

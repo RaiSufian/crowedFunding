@@ -24,7 +24,8 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     <div className="main_logo relative z-50 px-2">
                         <Link to="/">
-                            <img src="/images/logo.png" width={117} height={35} alt="logo" />
+                            {/* <img src="/images/logo.png" width={117} height={35} alt="logo" /> */}
+                            <h1 className="font-title text-xl">VCrowdFund</h1>
                         </Link>
                     </div>
                     <div className="main_menu">

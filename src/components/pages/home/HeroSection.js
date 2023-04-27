@@ -1,10 +1,13 @@
-const HeroSection = () => {
+const HeroSection = ({ heroText, smallScall, smalltime, profit_timing }) => {
     return (
         <section className="hero_bg text-white">
             <div className="lg:w-[1260px] max-w-full mx-auto font-mont">
                 <div className="text-center md:p-5 p-2 ">
-                    <h2 className="lg:text-[56px] md:text-[32px] text-[22px] font-bold leading-relaxed lg:py-20 md:py-10 md:py-5 py-2">Making Profits by investing in Properties in London by small unsecured Loans</h2>
-                    <p className="md:text-xs text-md lg:font-bold font-semibold">Do Not Invest if you can not risk loosing complete investment, this is risky investment and unprotected
+                    <h2 className="lg:text-[56px] md:text-[32px] text-[22px] font-bold leading-relaxed lg:py-20 md:py-10 md:py-5 py-2">{heroText?.wid_heading}</h2>
+                    <p className="md:text-xs text-md lg:font-bold font-semibold">
+                        <div
+                            dangerouslySetInnerHTML={{ __html: heroText?.wid_details }}
+                        />
                     </p>
                 </div>
                 <div className="lg:w-[14%] w-[25%] border-t-8 border-[#ffa500] mx-auto"></div>
@@ -12,34 +15,40 @@ const HeroSection = () => {
                 <div className="md:flex">
                     <div className="md:flex-1 bg-[#ffa500]">
                         <div className="lg:px-10 px-3 pt-5 ">
-                            <h3 className="lg:text-2xl text-xl font-bold">Small Scale Investments</h3>
+                            <h3 className="lg:text-2xl text-xl font-bold">{smallScall?.wid_heading}</h3>
                         </div>
                         <div className=" lg:px-10 px-3 md:py-5 py-2">
                             <hr className="w-[80%] h-0 mx-auto border-t border-gray-200" />
                         </div>
                         <div className="lg:px-10 px-3 pb-5">
-                            <p className="text-lg font-lato text-[#151D29FF]">Investors who have small investments and not ready to invest fully into Real Estate can work on our platforms, learn from Developers. London Real Estate developments are bigger  investments.</p>
+                            <p className="text-lg font-lato text-[#151D29FF]"><div
+                                dangerouslySetInnerHTML={{ __html: smallScall?.wid_details }}
+                            /></p>
                         </div>
                     </div>
                     <div className="md:flex-1 bg-[#e01467]">
                         <div className="lg:px-10 px-3 pt-5 ">
-                            <h3 className="lg:text-2xl text-xl font-bold">Small Time Developers</h3>
+                            <h3 className="lg:text-2xl text-xl font-bold">{smalltime?.wid_heading}</h3>
                         </div>
                         <div className="lg:px-10 px-3 md:py-5 py-2">
                             <hr className="w-[80%] h-0 mx-auto" />
                         </div>
                         <div className="lg:px-10 px-3 pb-5">
-                            <p className="text-lg font-lato text-[#151D29FF]">We look for Small Developers with small investment projects and who are not able to achieve due to lack of funds, but they have shown credible achievements in helping people make profits. </p>
+                            <p className="text-lg font-lato text-[#151D29FF]"><div
+                                dangerouslySetInnerHTML={{ __html: smalltime?.wid_details }}
+                            /> </p>
                         </div>
                     </div>
                     <div className="md:flex-1 bg-[#7230b0]"><div className="lg:px-10 px-3 pt-5 ">
-                        <h3 className="lg:text-2xl text-xl font-bold">Profits & <br className="lg:hidden md:block hidden" />Timings</h3>
+                        <h3 className="lg:text-2xl text-xl font-bold">{profit_timing?.wid_heading}</h3>
                     </div>
                         <div className="lg:px-10 px-3 md:py-5 py-2">
                             <hr className="w-[80%] h-0 mx-auto" />
                         </div>
                         <div className="lg:px-10 px-3 pb-5">
-                            <p className="text-lg font-lato text-[#151D29FF]">Undertaking small projects has proven to be advantageous for developers, as they have achieved minimum profits of 8% and maximum profits of 38% within a period of 12 to 16 months. </p>
+                            <p className="text-lg font-lato text-[#151D29FF]"> <p className="text-lg font-lato text-[#151D29FF]"><div
+                                dangerouslySetInnerHTML={{ __html: profit_timing?.wid_details }}
+                            /> </p> </p>
                         </div></div>
                 </div>
             </div>

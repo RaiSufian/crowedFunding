@@ -14,12 +14,12 @@ const CheckOut = () => {
     const project = useSelector((state) => state.activeproject.project);
     const userDetails = useSelector((state) => state.userDetails.user);
     const navigate = useNavigate()
-    console.log("current project is", project);
+    // console.log("current project is", project);
 
     useEffect(() => {
         if (project == null) {
             navigate("/");
-            console.log("project is ok");
+            // console.log("project is ok");
 
         }
     }, []);
@@ -58,7 +58,7 @@ const CheckOut = () => {
         return actions.order.capture().then(function (details) {
             const { payer } = details;
             setSuccess(true);
-            console.log("complete order object", details);
+            // console.log("complete order object", details);
             // console.log("payment down is", payer);
             formik.values.payID = details.id;
             setOrderpay(formik.values.investprice);
@@ -100,9 +100,9 @@ const CheckOut = () => {
             country: userDetails.country
 
         }
-        console.log("my params is", params);
+        // console.log("my params is", params);
         axios.post(`/index.php?action=add_investment&confirm_user_name=${userDetails.email}&proj_id=${project.proj_id}&pi_referance_code=${formik.values.payID}&pi_payment=${orderpay}&pi_type=${formik.values.paymethod}&pi_status=1&user_fname=${userDetails.name}&user_phone=${userDetails.phone}&user_dob=${userDetails.DOB}&user_house_no=${userDetails.houseNo}&user_address=${userDetails.address}&user_street=${userDetails.streetNo}&user_town=${userDetails.townName}&user_countrie=${userDetails.country}&user_state=${userDetails.state}&user_city=${userDetails.city}`).then((resp) => {
-            console.log("add payment result", resp)
+            // console.log("add payment result", resp)
             if (resp.status == "200") {
                 dispatch(removeProject());
                 dispatch(removeDetails());
@@ -154,7 +154,7 @@ const CheckOut = () => {
     return (
         <>
             < Helmet >
-                <title>Check Out page | The Future of Property Investment</title>
+                <title>Crowd Fund House London | Small Investment in London Property Market</title>
             </Helmet>
             <ToastContainer />
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">

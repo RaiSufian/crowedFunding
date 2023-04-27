@@ -146,7 +146,7 @@ const StartFunding = () => {
     // On Submit form
     // ==================================================
     const onSubmit = (values) => {
-        console.log("my current values is", values);
+        // console.log("my current values is", values);
         dispatch(addDetails(values));
         navigate("/checkout");
     }
@@ -210,7 +210,7 @@ const StartFunding = () => {
 
     }, [Unitoken])
     useEffect(() => {
-        console.log("my current country is", formik.values.country)
+        // console.log("my current country is", formik.values.country)
         if (formik.values.country) {
             getState();
         }
@@ -224,7 +224,7 @@ const StartFunding = () => {
     return (
         <>
             < Helmet >
-                <title>start property investment | The Future of Property Investment</title>
+                <title>Crowd Fund House London | Small Investment in London Property Market</title>
             </Helmet>
             <div className="contact_bread_crumb py-8 bg-gray-100 border-b  border-gray-200 px-2">
                 <div className="lg:w-[1260px] max-w-full mx-auto font-mont relative">
@@ -367,14 +367,14 @@ const StartFunding = () => {
                                     <span className="text-red-500  text-sm">{formik.errors.TerCon}</span>
                                 ) : null}
                             </div>
-                            <div className="pt-4 w-full px-2 flex items-center gap-2">
+                            <div className="pt-4 w-full px-2 flex items-center gap-4">
                                 <input type="checkbox" value={formik.values.disc} onChange={formik.handleChange} onBlur={formik.handleBlur} name="disc" checked={formik.values.disc ? "true" : ""} /> <Link className="text-sm" to="/disclaimer" target="_blank">Disclaimer</Link>
                                 {formik.touched.disc && formik.errors.disc ? (
                                     <span className="text-red-500  text-sm">{formik.errors.disc}</span>
                                 ) : null}
                             </div>
-                            <div className="pt-4 w-full px-2 flex items-center gap-2">
-                                <input type="checkbox" value={formik.values.agree} onChange={formik.handleChange} onBlur={formik.handleBlur} name="agree" checked={formik.values.agree ? "true" : ""} /> <Link className="text-sm " to="/view_agreement" target="_blank">agreement </Link>
+                            <div className="pt-4 w-full px-2 flex items-center gap-4">
+                                <input type="checkbox" value={formik.values.agree} onChange={formik.handleChange} onBlur={formik.handleBlur} name="agree" checked={formik.values.agree ? "true" : ""} /> <Link className="text-sm " to="/view_agreement" target="_blank">Agreement </Link>
                                 {formik.touched.agree && formik.errors.agree ? (
                                     <span className="text-red-500  text-sm">{formik.errors.agree}</span>
                                 ) : null}
